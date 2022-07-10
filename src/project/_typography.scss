@@ -14,7 +14,7 @@
 }
 
 :where(body) {
---fs: var(--fsf-base, 1rem);
+--fs: var(--fs-base, 1rem);
 --lh: 1.5;
   font-family: var(--sans, sans-serif); 
   font-weight: 400; 

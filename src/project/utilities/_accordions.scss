@@ -10,7 +10,7 @@
     padding: .5rem .75rem;
              
     &:after {
-      --svg: var(--plus-symbol);  
+      --svg: var(--plus);  
       @extend %svg-mask;   
       float: right;
       margin-top: 0.25rem;
@@ -26,7 +26,7 @@
 .details-menu[open] summary:after, 
 .details-block[open] summary:after, 
 .details-code[open] summary:after {
-  --svg: var(--minus-symbol);
+  --svg: var(--minus);
 } 
 
 .details-code {
@@ -67,7 +67,6 @@
 .details-block p:last-child {
   margin-bottom: 0;
 }
-
 
 // Details menu
 .details-menu {

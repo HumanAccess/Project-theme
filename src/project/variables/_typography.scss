@@ -22,15 +22,8 @@ $fs-h5: calc(var(--fs-base) * 1.3) !default;
 $fs-h6: calc(var(--fs-base) * 1.1) !default;
 
 // Fluid sizes
-// Sizes are based on screen widths 1920px to 400px, calculated using
+// Sizes are calculated on screen widths 1920px to 400px using
 // https://www.fluid-type-scale.com/ by Aleksandr Hovhannisyan.
-
-// The var(--plus) CSS variable stops Sass calculating clamp values
-// and returning error for combining vw and rem values, the value for 
-// it is provided in the CSS without a Sass variable (see below).
-// Note. When writing clamp sizes as below in CSS variables there is no
-// issue with using the value + directly, the var(--plus) CSS variable 
-// is only required for 'tricking' Sass variables.
 
 $fsf-base: clamp(0.94rem, 0.07vw + 0.92rem, 1rem) !default;
 $fsf-sm: clamp(0.75rem, 0.22vw + 0.7rem, 0.87rem) !default;

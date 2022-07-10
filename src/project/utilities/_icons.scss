@@ -2,7 +2,6 @@
 @import "svg";
 
 // SVG extend
-
 %svg-mask {
   display: var(--ico-display);
   background-color: var(--ico-color);
@@ -15,7 +14,6 @@
 }
 
 // Class utility styles
-
 .ico-a:after, .ico-b:before, 
 .ico-block-a:after, .ico-block-b:before {
   @extend %svg-mask;
@@ -30,10 +28,7 @@
   margin-inline: auto;
 }
 
-
-
 // Class utility icons
-
 .home {
 --svg: var(--home);
 }
@@ -52,4 +47,12 @@
 
 .pagelink {
 --svg: var(--pagelink);
+}
+
+.plus {
+--svg: var(--plus);
+}
+
+.minus {
+--svg: var(--minus);
 }

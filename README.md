@@ -1,32 +1,40 @@
 ---
-Title: "Project"
+Title: "Project Theme"
 Description: "Variables and styles for website theme design"
 Version: "1.0"
 Author: "Phil Brown"
 Email: "phil@humanaccess.com.au"
 ---
 
-# Project
+# Project Theme
 
-Simple CSS variables and baseline property styles designed to be used as starter CSS for website design. Includes the assets for the Libre Franklin font family used, and styles and JS for a manual color scheme switching button.
+Still under development, this is [Project](https://github.com/HumanAccess/Project) rebuilt using Dart-Sass and slightly restructured to make it more practical to use for theme design.
+
+It contains the same elements with a few extras and includes the assets for the Libre Franklin font family, plus the styles and script for the manual color scheme switching button.
 
 *Variables*
 
-- Font families and sizes
-- Mono and primary colors
-- Light/dark color schemes
+- Font families
+- Static and fluid font sizes
+- HSL mono and primary colors
+- Light and dark color schemes
 - Gradients and shadows
 
 *Styles*
 
-- HTML and body
+- Globals
 - Typography
-- Forms and buttons
+- Forms
+- Buttons
 - Tables
 
 *Utilities*
  
-- Mini CSS grid
+- CSS grid 
 - SVG icons
-- Custom buttons
-- Text and spacing
+- Containers
+- Cards
+- Accordions
+- Type, lists and spacing
+
+

@@ -4,19 +4,16 @@
 $blue-h: 240 !default;
 $blue-s: 45% !default;
 $blue-l: 50% !default;
-
 $blue-lighter: $blue-h, $blue-s, 70% !default;
 $blue-light: $blue-h, $blue-s, 62% !default;
 $blue: $blue-h, $blue-s, $blue-l !default;
 $blue-dark: $blue-h, $blue-s, 35% !default;
 $blue-darker: $blue-h, $blue-s, 25% !default;
 
-
 $red-h: 0 !default;
 $red-s: 100% !default;
 $red-l: 35% !default;
 $red: $red-h, $red-s, $red-l !default;
-
 $red-lighter: $red-h, $red-s, 65% !default;
 $red-light: $red-h, $red-s, 45% !default;
 $red: $red-h, $red-s, $red-l !default;
@@ -27,7 +24,6 @@ $green-h: 120 !default;
 $green-s: 50% !default;
 $green-l: 30% !default;
 $green: $green-h, $green-s, $green-l !default;
-
 $green-lighter: $green-h, $green-s, 55% !default;
 $green-light: $green-h, $green-s, 40% !default;
 $green: $green-h, $green-s, $green-l !default;
@@ -38,7 +34,6 @@ $yellow-h: 60 !default;
 $yellow-s: 100% !default;
 $yellow-l: 57% !default;
 $yellow: $yellow-h, $yellow-s, $yellow-l !default;
-
 $yellow-lighter: $yellow-h, $yellow-s, 80% !default;
 $yellow-light: $yellow-h, $yellow-s, 69% !default;
 $yellow: $yellow-h, $yellow-s, $yellow-l !default;
@@ -52,22 +47,19 @@ $yellow-darker: $yellow-h, $yellow-s, 44% !default;
   --blue-light: hsl(#{$blue-light});
   --blue-lighter: hsl(#{$blue-lighter});
   --blue-dark: hsl(#{$blue-dark});
-  --blue-darker: hsl(#{$blue-darker});
-  
+  --blue-darker: hsl(#{$blue-darker});  
   --red-hsl: #{$red};
   --red: hsl(#{$red}); 
   --red-light: hsl(#{$red-light});
   --red-lighter: hsl(#{$red-lighter});
   --red-dark: hsl(#{$red-dark});
   --red-darker: hsl(#{$red-darker});
-
   --green-hsl: #{$green};
   --green: hsl(#{$green});  
   --green-light: hsl(#{$green-light});
   --green-lighter: hsl(#{$green-lighter});
   --green-dark: hsl(#{$green-dark});
   --green-darker: hsl(#{$green-darker});
-
   --yellow-hsl: #{$yellow};
   --yellow: hsl(#{$yellow});  
   --yellow-light: hsl(#{$yellow-light});
