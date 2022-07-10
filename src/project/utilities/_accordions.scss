@@ -1,0 +1,110 @@
+// Accordions using <details> tag 
+
+.details-menu, .details-block, .details-code {
+--mb: 1rem;
+--radius: .25rem;
+  margin-bottom: var(--mb);
+  
+  summary {
+    list-style: none;
+    padding: .5rem .75rem;
+             
+    &:after {
+      --svg: var(--plus-symbol);  
+      @extend %svg-mask;   
+      float: right;
+      margin-top: 0.25rem;
+    }
+  }
+}
+   
+.details-menu[open] summary, 
+.details-block[open] summary {
+  border-bottom: 1px solid var(--surf-3);
+} 
+  
+.details-menu[open] summary:after, 
+.details-block[open] summary:after, 
+.details-code[open] summary:after {
+  --svg: var(--minus-symbol);
+} 
+
+.details-code {
+  pre {
+    border: none;
+    margin-inline: -1px;
+    margin-bottom: -1px;
+    border-bottom-left-radius: var(--radius); 
+    border-bottom-right-radius: var(--radius);
+  }
+}
+
+.details-block, .details-code {
+  border: 1px solid var(--surf-3);
+  border-radius: var(--radius);
+}
+
+.details-block > * {
+  margin-inline: .75rem;
+}
+
+.details-block[open] {
+  padding-bottom: .75rem;
+}
+
+.details-block summary {
+  margin-inline: 0;
+}
+
+.details-block[open] summary {
+  margin-bottom: .5rem;
+}
+
+.details-block p {
+  margin-bottom: .5rem;
+}
+
+.details-block p:last-child {
+  margin-bottom: 0;
+}
+
+
+// Details menu
+.details-menu {
+  border-block: 1px solid var(--surf-3); 
+  border-radius: var(--radius); 
+  
+  summary {
+    border-inline: 1px solid var(--surf-3); 
+    border-top-left-radius: var(--radius); 
+    border-top-right-radius: var(--radius);
+  } 
+  
+  a {
+    text-decoration: none;
+    display: block;
+  } 
+  
+  ul {  
+    margin-bottom: 0;
+    list-style: none;
+    padding-left: 0;
+  }   
+  
+  li {
+    border-inline: 1px solid var(--surf-3); 
+    border-bottom: 1px solid var(--surf-3); 
+    padding: .35rem .75rem;
+    
+    &:hover {
+      background-color: var(--surf-2);
+    }
+  }
+  
+  li:last-child {
+    border-bottom: none;
+    border-bottom-left-radius: var(--radius); 
+    border-bottom-right-radius: var(--radius);
+    margin-bottom: -0.031rem;
+  }    
+}

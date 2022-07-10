@@ -1,0 +1,25 @@
+// List utilities
+
+// Plain list
+.pl, .pl-il {
+  list-style: none;
+  padding-left: 0;
+}
+
+// Inline list
+.il {
+  display: inline-block;
+}
+
+// Plain list inline
+.pl-il {
+  
+  li {
+    display: inline-block;
+    margin-right: .5rem;
+  }
+  
+  li:last-child {
+    margin-right: 0;
+  }
+}

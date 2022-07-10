@@ -1,0 +1,85 @@
+// Forms
+
+:where(input, button, select, optgroup, textarea) {
+  color: inherit;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  background-color: inherit;
+}
+
+:where(input, button, select, optgroup, textarea):disabled,
+:where([aria-disabled="true"]) {
+  opacity: .65;
+  pointer-events: none;
+}
+
+:where(input, textarea, select) {
+  padding: .25rem .5rem;
+  background-clip: padding-box;
+  border: 1px solid var(--surf-4);
+}
+
+:where(textarea) {
+  resize: both;
+}
+
+:where([type=checkbox], [type=radio]) {
+  width: 1em;
+  height: 1em;
+  margin-top: 0.21em;
+  margin-right: 0.1em;
+  vertical-align: top;
+}
+
+:where([type=color]) { 
+  cursor: pointer;
+  padding: 0;
+  border-radius: 0;
+}
+
+:where(input[type="search"]) {
+  -webkit-appearance: textfield;
+}
+
+:where(input[type="search"])::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+:where(select) {
+  color: var(--text);
+  word-wrap: normal;
+  padding: .25rem;
+  background-color: var(--surf-1);
+}
+
+:where(fieldset) {
+  margin-bottom: .5rem;
+  border: 1px solid var(--surf-4);
+  border-radius: 2px;
+}
+
+:where(legend) {
+  margin-bottom: .5rem;
+  border: 1px solid var(--surf-4);
+  border-radius: 2px;
+  background-color: var(--surf-2);
+  padding: .25rem .5rem;
+}
+
+:where(output) {
+  display: inline-block;
+}
+
+:where(progress) {
+  vertical-align: baseline;
+}
+
+:where([placeholder])::placeholder {
+  color: var(--text-light);
+}
+
+:where(input[type="color"])::-webkit-color-swatch-wrapper {
+  padding: 0;
+}
+

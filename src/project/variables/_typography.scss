@@ -1,0 +1,76 @@
+// Typography
+
+// Sass variables
+
+// Font families
+$sans: "Libre Franklin", system-ui, -apple-system, "Helvetica Neue", Arial, sans-serif !default;
+$serif: Georgia, ui-serif, serif !default;
+$monospace: Consolas, Menlo, Monaco, SFMono-Regular, monospace !default;
+
+// Static sizes
+$fs-base: 1rem;
+$fs-xs: calc(var(--fs-base) * .75) !default;
+$fs-sm: calc(var(--fs-base) * .875) !default;
+$fs-lg: calc(var(--fs-base) * 1.063) !default;
+$fs-lgr: calc(var(--fs-base) * 1.125) !default;
+$fs-lgst: calc(var(--fs-base) * 1.25) !default;
+$fs-h1: calc(var(--fs-base) * 3) !default;
+$fs-h2: calc(var(--fs-base) * 2.3) !default;
+$fs-h3: calc(var(--fs-base) * 1.8) !default;
+$fs-h4: calc(var(--fs-base) * 1.5) !default;
+$fs-h5: calc(var(--fs-base) * 1.3) !default;
+$fs-h6: calc(var(--fs-base) * 1.1) !default;
+
+// Fluid sizes
+// Sizes are based on screen widths 1920px to 400px, calculated using
+// https://www.fluid-type-scale.com/ by Aleksandr Hovhannisyan.
+
+// The var(--plus) CSS variable stops Sass calculating clamp values
+// and returning error for combining vw and rem values, the value for 
+// it is provided in the CSS without a Sass variable (see below).
+// Note. When writing clamp sizes as below in CSS variables there is no
+// issue with using the value + directly, the var(--plus) CSS variable 
+// is only required for 'tricking' Sass variables.
+
+$fsf-base: clamp(0.94rem, 0.07vw + 0.92rem, 1rem) !default;
+$fsf-sm: clamp(0.75rem, 0.22vw + 0.7rem, 0.87rem) !default;
+$fsf-lg: clamp(1rem, 0.11vw + 0.97rem, 1.06rem) !default;
+$fsf-lgr: clamp(1.06rem, 0.11vw + 1.03rem, 1.13rem) !default;
+$fsf-lgst: clamp(1.13rem, 0.23vw + 1.07rem, 1.25rem) !default;
+$fsf-h1: clamp(2.4rem, 1.09vw + 2.13rem, 3rem) !default;
+$fsf-h2: clamp(1.8rem, 0.91vw + 1.57rem, 2.3rem) !default;
+$fsf-h3: clamp(1.5rem, 0.55vw + 1.36rem, 1.8rem) !default;
+$fsf-h4: clamp(1.38rem, 0.23vw + 1.32rem, 1.5rem) !default;
+$fsf-h5: clamp(1.18rem, 0.23vw + 1.12rem, 1.3rem) !default;
+$fsf-h6: clamp(1.06rem, 0.07vw + 1.05rem, 1.1rem) !default;
+
+// CSS variables
+
+:where(html) {
+  --sans:  #{inspect($sans)};
+  --serif: #{$serif};
+  --monospace: #{$monospace};
+  --fs-base: #{$fs-base};
+  --fs-xs: #{$fs-xs};
+  --fs-sm: #{$fs-sm};
+  --fs-lg: #{$fs-lg};
+  --fs-lgr: #{$fs-lgr};
+  --fs-lgst: #{$fs-lgst};
+  --fs-h1: #{$fs-h1};
+  --fs-h2: #{$fs-h2};
+  --fs-h3: #{$fs-h3};
+  --fs-h4: #{$fs-h4};
+  --fs-h5: #{$fs-h5};
+  --fs-h6: #{$fs-h6};
+  --fsf-base: #{$fsf-base};
+  --fsf-sm: #{$fsf-sm};
+  --fsf-lg: #{$fsf-lg};
+  --fsf-lgr: #{$fsf-lgr};
+  --fsf-lgst: #{$fsf-lgst};
+  --fsf-h1: #{$fsf-h1};
+  --fsf-h2: #{$fsf-h2};
+  --fsf-h3: #{$fsf-h3};
+  --fsf-h4: #{$fsf-h4};
+  --fsf-h5: #{$fsf-h5};
+  --fsf-h6: #{$fsf-h6};
+}

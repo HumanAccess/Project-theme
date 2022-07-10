@@ -1,0 +1,55 @@
+// SVG icons
+@import "svg";
+
+// SVG extend
+
+%svg-mask {
+  display: var(--ico-display);
+  background-color: var(--ico-color);
+  content: "";
+  width: var(--fs);
+  height: var(--fs);
+  vertical-align: var(--ico-valign);
+  -webkit-mask-image: var(--svg);
+  mask-image: var(--svg);
+}
+
+// Class utility styles
+
+.ico-a:after, .ico-b:before, 
+.ico-block-a:after, .ico-block-b:before {
+  @extend %svg-mask;
+}
+
+// Margins require work to make flexible for varying font sizes.
+.ico-a:after { margin-left: .25rem; }
+.ico-b:before { margin-right: .25rem; }
+
+.ico-block-a:after, .ico-block-b:before {
+  --ico-display: block;
+  margin-inline: auto;
+}
+
+
+
+// Class utility icons
+
+.home {
+--svg: var(--home);
+}
+
+.email {
+--svg: var(--email);
+}
+
+.arrowup {
+--svg: var(--arrowup);
+}
+
+.newtab {
+--svg: var(--newtab);
+}
+
+.pagelink {
+--svg: var(--pagelink);
+}

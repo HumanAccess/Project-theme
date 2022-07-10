@@ -1,0 +1,51 @@
+// Type utilities
+
+.txt-left {
+  text-align: left;
+}
+
+.txt-right {
+  text-align: right;
+}
+
+.txt-center {
+  text-align: center;
+}
+
+.lead, .fs-lgst, .fs-lgr, .fs-lg, .fs-base, .fs-sm, .fs-xs,
+.fs-h1, .fs-h2, .fs-h3, .fs-h4, .fs-h5, .fs-h6,
+.fsf-lgst, .fsf-lgr, .fsf-lg, .fsf-base, .fsf-sm,
+.fsf-h1, .fsf-h2, .fsf-h3, .fsf-h4, .fsf-h5, .fsf-h6 {
+  font-size: var(--fs);
+}
+
+.lead {
+  --fs: var(--fsf-lgst);
+}
+
+// Static font sizes
+.fs-lgst { --fs: var(--fs-lgst); }
+.fs-lgr { --fs: var(--fs-lgr); }
+.fs-lg { --fs: var(--fs-lg); }
+.fs-base { --fs: var(--fs-base); }
+.fs-sm { --fs: var(--fs-sm); }
+.fs-xs { --fs: var(--fs-xs); }
+.fs-h1 { --fs: var(--fs-h1); }
+.fs-h2 { --fs: var(--fs-h2); }
+.fs-h3 { --fs: var(--fs-h3); }
+.fs-h4 { --fs: var(--fs-h4); }
+.fs-h5 { --fs: var(--fs-h5); }
+.fs-h6 { --fs: var(--fs-h6); }
+
+// Fluid font sizes
+.fsf-lgst { --fs: var(--fsf-lgst); }
+.fsf-lgr { --fs: var(--fsf-lgr); }
+.fsf-lg { --fs: var(--fsf-lg); }
+.fsf-base { --fs: var(--fsf-base); }
+.fsf-sm { --fs: var(--fsf-sm); }
+.fsf-h1 { --fs: var(--fsf-h1); }
+.fsf-h2 { --fs: var(--fsf-h2); }
+.fsf-h3 { --fs: var(--fsf-h3); }
+.fsf-h4 { --fs: var(--fsf-h4); }
+.fsf-h5 { --fs: var(--fsf-h5); }
+.fsf-h6 { --fs: var(--fsf-h6); }

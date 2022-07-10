@@ -1,0 +1,36 @@
+// Mono colors
+
+// Sass variables
+$gray-1: 0, 0%, 97% !default;
+$gray-2: 0, 0%, 91% !default;
+$gray-3: 0, 0%, 85% !default;
+$gray-4: 0, 0%, 75% !default;
+$gray-5: 0, 0%, 67% !default;
+$gray-6: 0, 0%, 57% !default;
+$gray-7: 0, 0%, 45% !default;
+$gray-8: 0, 0%, 36% !default;
+$gray-9: 0, 0%, 25% !default;
+$gray-10: 0, 0%, 15% !default;
+$gray-11: 0, 0%, 11% !default;
+$gray-12: 0, 0%, 3% !default;
+
+// CSS variables
+:where(html) {
+  --h: 0;
+  --s: 0%;
+  --l: 0%;  
+  --black-hsl: 0, 0%, 0%;
+  --white-hsl: 0, 0%, 100%;
+  --gray-1: hsl(#{$gray-1});
+  --gray-2: hsl(#{$gray-2});
+  --gray-3: hsl(#{$gray-3});
+  --gray-4: hsl(#{$gray-4});
+  --gray-5: hsl(#{$gray-5});
+  --gray-6: hsl(#{$gray-6});
+  --gray-7: hsl(#{$gray-7});
+  --gray-8: hsl(#{$gray-8});
+  --gray-9: hsl(#{$gray-9});
+  --gray-10: hsl(#{$gray-10});
+  --gray-11: hsl(#{$gray-11});
+  --gray-12: hsl(#{$gray-12});
+}

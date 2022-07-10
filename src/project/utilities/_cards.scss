@@ -1,0 +1,78 @@
+// Cards
+
+.card {
+--card-border: var(--surf-3);
+--card-bg: var(--surf-2);
+--card-radius: .25rem;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid var(--card-border);
+  border-radius: var(--card-radius);
+  
+  > * {
+    margin: -1px;
+    padding-inline: 1rem;
+  }
+  
+  :first-child {
+    background-color: var(--card-bg);
+    padding-block: .5rem;
+    margin-bottom: .5rem;
+    border: 1px solid var(--card-border);
+    border-top-left-radius: var(--card-radius);
+    border-top-right-radius: var(--card-radius);
+    background-image: var(--gradient-2);
+  }
+  
+  p {
+    margin-bottom: .5rem;
+  }
+  
+  .btn, button {
+    margin-inline: 1rem;
+    margin-top: auto;
+    margin-bottom: .5rem;
+  }
+}
+
+// Card colors
+
+.card-blue {
+  --card-border: var(--blue-light); 
+  --card-bg: var(--blue);  
+  :first-child {
+    color: #fff;
+  }  
+}
+
+.card-green {
+  --card-border: var(--green-light); 
+  --card-bg: var(--green);  
+  :first-child {
+    color: #fff;
+  }  
+}
+
+.card-red {
+  --card-border: var(--red-light); 
+  --card-bg: var(--red);  
+  :first-child {
+    color: #fff;
+  }  
+}
+
+.card-yellow {
+  --card-border: var(--yellow-darker); 
+  --card-bg: var(--yellow);  
+  :first-child {
+    color: #000;
+  }  
+}
+
+.card-dark {
+  --card-border: var(--gray-8); 
+  --card-bg: var(--gray-10);  
+  :first-child {
+    color: #fff;
+  }  
+}

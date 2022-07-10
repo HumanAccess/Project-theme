@@ -1,0 +1,117 @@
+// Grid
+
+@import "variables/grid";
+
+// Grid variables
+:where(html) {  
+    @each $fraction-grid, $value in $fraction-grid {
+    --#{$fraction-grid}: #{$value};
+  }
+}
+
+// Grid base
+.grid {
+--g-d: grid;
+--g-g: ;
+--g-c: ;
+  display: var(--g-d);
+  gap: var(--g-g);
+  grid-template-columns: var(--g-c);
+}
+
+// Grid class utilities
+
+// Base sizes
+
+@each $fraction-grid, $value in $fraction-grid {
+.#{$fraction-grid} {
+  --g-c: var(--#{$fraction-grid});        
+  }
+}
+
+@each $gaps, $value in $gaps {
+.#{$gaps} {
+  gap: #{$value};        
+  }
+}
+
+// Responsive sizes
+// 1400
+@media screen and (max-width: $bp1400) {
+
+  @each $fraction-grid, $value in $fraction-grid {
+  .#{$fraction-grid}-xxl {
+    --g-c: var(--#{$fraction-grid});        
+    }
+  }
+  
+  @each $gaps, $value in $gaps {
+  .#{$gaps}-xxl {
+    gap: #{$value};        
+    }
+  }
+}
+
+// 1200
+@media screen and (max-width: $bp1200) {
+  
+  @each $fraction-grid, $value in $fraction-grid {
+  .#{$fraction-grid}-xl {
+    --g-c: var(--#{$fraction-grid});        
+    }
+  }
+  
+  @each $gaps, $value in $gaps {
+  .#{$gaps}-xl {
+    gap: #{$value};        
+    }
+  }
+}
+
+// 992
+@media screen and (max-width: $bp992) {
+  
+  @each $fraction-grid, $value in $fraction-grid {
+  .#{$fraction-grid}-lg {  
+    --g-c: var(--#{$fraction-grid});        
+    }
+  }
+  
+  @each $gaps, $value in $gaps {
+  .#{$gaps}-lg {
+    gap: #{$value};        
+    }
+  }
+}
+
+// 768
+@media screen and (max-width: $bp768) {
+  
+  @each $fraction-grid, $value in $fraction-grid {
+  .#{$fraction-grid}-md {  
+    --g-c: var(--#{$fraction-grid});        
+    }
+  }
+  
+  @each $gaps, $value in $gaps {
+  .#{$gaps}-md {
+    gap: #{$value};        
+    }
+  }
+}
+
+// 576
+@media screen and (max-width: $bp576) {
+  
+  @each $fraction-grid, $value in $fraction-grid {
+  .#{$fraction-grid}-sm {  
+    --g-c: var(--#{$fraction-grid});        
+    }
+  }
+  
+  @each $gaps, $value in $gaps {
+  .#{$gaps}-sm {
+    gap: #{$value};        
+    }
+  }
+}

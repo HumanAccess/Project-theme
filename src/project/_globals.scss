@@ -1,0 +1,16 @@
+// Globals
+
+@media (prefers-reduced-motion: no-preference) {
+  :where(html) { scroll-behavior: smooth; }
+}
+
+*, *::before, *::after { 
+  box-sizing: border-box;
+}
+
+* { margin: 0; }
+
+:where(html) { 
+  height: 100%; 
+  -webkit-text-size-adjust: none; 
+}

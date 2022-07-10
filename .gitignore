@@ -1,0 +1,8 @@
+/site/
+
+/src/style.scss
+/src/theme/
+*.ppr
+.hugo_build.lock
+prepros.config
+desktop.ini
