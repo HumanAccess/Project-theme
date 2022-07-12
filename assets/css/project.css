@@ -687,6 +687,17 @@ a > :where(code) {
   --btn-padding: .75rem 1.5rem;
 }
 
+.btn-toolbar {
+  display: flex;
+  flex-direction: row;
+}
+.btn-toolbar > * {
+  margin-right: 0.25rem;
+}
+.btn-toolbar > *:last-child {
+  margin-right: 0;
+}
+
 .btn-group {
   display: flex;
 }

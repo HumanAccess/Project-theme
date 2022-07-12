@@ -170,6 +170,19 @@
   --btn-padding: .75rem 1.5rem;
 }
 
+.btn-toolbar {
+  display: flex;
+  flex-direction: row;
+  
+  > * {
+    margin-right: .25rem;
+    
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}
+
 .btn-group {
   display: flex;
 }
