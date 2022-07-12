@@ -667,14 +667,24 @@ a > :where(code) {
   --btn-focus-hsl: var(--yellow-hsl);
 }
 
+.btn-xs {
+  --fs: var(--fs-xs);
+  --btn-padding: .15rem .5rem;
+}
+
 .btn-sm {
-  --fs: var(--fsf-sm);
-  --btn-padding: .15rem .75rem;
+  --fs: var(--fs-sm);
+  --btn-padding: .2rem .65rem;
 }
 
 .btn-lg {
-  --fs: var(--fsf-lgst);
-  --btn-padding: .5rem 1.5rem;
+  --fs: var(--fs-lgr);
+  --btn-padding: .5rem 1.25rem;
+}
+
+.btn-lgr {
+  --fs: var(--fs-lgst);
+  --btn-padding: .75rem 1.5rem;
 }
 
 .btn-group {
@@ -829,7 +839,7 @@ a > :where(code) {
   --minus: url("data:image/svg+xml,<svg viewBox='0 0 16 16' fill='currentColor' xmlns='http://www.w3.org/2000/svg'><path fill-rule='evenodd' d='m2 9v-2h12v2z' clip-rule='evenodd'/></svg>");
 }
 
-.details-menu summary:after, .details-block summary:after, .details-code summary:after, .ico-a:after, .ico-b:before,
+:where(.details, .details-menu, .details-code, .details-accordion) summary:after, .ico-a:after, .ico-b:before,
 .ico-block-a:after, .ico-block-b:before, .mode:before {
   display: var(--ico-display);
   background-color: var(--ico-color);
@@ -1014,12 +1024,67 @@ a > :where(code) {
   margin-right: 0;
 }
 
-.mb, .mb-0, .mb-xxs, .mb-xs, .mb-sm, .mb-lg, .mb-xl {
-  --mb: ;
+.w-25 {
+  width: 25%;
+}
+
+.w-50 {
+  width: 50%;
+}
+
+.w-75 {
+  width: 75%;
+}
+
+.w-100 {
+  width: 100%;
+}
+
+.h-25 {
+  height: 25%;
+}
+
+.h-50 {
+  height: 50%;
+}
+
+.h-75 {
+  height: 75%;
+}
+
+.h-100 {
+  height: 100%;
+}
+
+.flex, .flex-r, .flex-c {
+  display: flex;
+}
+
+.flex-i {
+  display: inline-flex;
+}
+
+.flex-r {
+  flex-direction: row;
+}
+
+.flex-c {
+  flex-direction: column;
+}
+
+.block {
+  display: block;
+}
+
+.block-i {
+  display: inline-block;
+}
+
+.mb-1, .mb-0, .mb-xxs, .mb-xs, .mb-sml, .mb-sm, .mb-lg, .mb-xl, .mb-xxl {
   margin-bottom: var(--mb);
 }
 
-.mb {
+.mb-1 {
   --mb: 1rem;
 }
 
@@ -1028,49 +1093,74 @@ a > :where(code) {
 }
 
 .mb-xxs {
-  --mb: .15rem;
+  --mb: 0.15rem;
 }
 
 .mb-xs {
-  --mb: .25rem;
+  --mb: 0.25rem;
+}
+
+.mb-sml {
+  --mb: 0.5rem;
 }
 
 .mb-sm {
-  --mb: .5rem;
+  --mb: 0.75rem;
 }
 
 .mb-lg {
-  --mb: 1.5rem;
+  --mb: 1.25rem;
 }
 
 .mb-xl {
+  --mb: 1.5rem;
+}
+
+.mb-xxl {
   --mb: 2rem;
 }
 
-.details-menu, .details-block, .details-code {
+:where(.details, .details-menu, .details-code, .details-accordion) {
   --mb: 1rem;
   --radius: .25rem;
+  --border: 1px solid var(--surf-3);
   margin-bottom: var(--mb);
 }
-.details-menu summary, .details-block summary, .details-code summary {
+
+:where(.details, .details-menu, .details-code, .details-accordion) summary {
   list-style: none;
   padding: 0.5rem 0.75rem;
 }
-.details-menu summary:after, .details-block summary:after, .details-code summary:after {
+:where(.details, .details-menu, .details-code, .details-accordion) summary:after {
   --svg: var(--plus);
   float: right;
   margin-top: 0.25rem;
 }
 
-.details-menu[open] summary,
-.details-block[open] summary {
-  border-bottom: 1px solid var(--surf-3);
+.details-body {
+  padding: 0.5rem 0.75rem;
+  border-top: var(--border);
+}
+.details-body :where(p, ol, ul, dl, address) {
+  margin-bottom: 0.5rem;
+}
+.details-body :where(p, ol, ul, dl, address):last-child {
+  margin-bottom: 0;
+}
+
+.details-menu[open] summary {
+  border-bottom: var(--border);
 }
 
 .details-menu[open] summary:after,
-.details-block[open] summary:after,
-.details-code[open] summary:after {
+.details-code[open] summary:after,
+.details-accordion [open] summary:after {
   --svg: var(--minus);
+}
+
+.details, .details-code {
+  border: var(--border);
+  border-radius: var(--radius);
 }
 
 .details-code pre {
@@ -1081,41 +1171,32 @@ a > :where(code) {
   border-bottom-right-radius: var(--radius);
 }
 
-.details-block, .details-code {
-  border: 1px solid var(--surf-3);
-  border-radius: var(--radius);
+.details-accordion > * {
+  border: var(--border);
 }
 
-.details-block > * {
-  margin-inline: 0.75rem;
-}
-
-.details-block[open] {
-  padding-bottom: 0.75rem;
-}
-
-.details-block summary {
-  margin-inline: 0;
-}
-
-.details-block[open] summary {
-  margin-bottom: 0.5rem;
-}
-
-.details-block p {
-  margin-bottom: 0.5rem;
-}
-
-.details-block p:last-child {
+.details-accordion [open] {
   margin-bottom: 0;
 }
 
+:where(.details-accordion > *):first-child {
+  border-top-left-radius: var(--radius);
+  border-top-right-radius: var(--radius);
+  border-bottom: none;
+}
+
+:where(.details-accordion > *):last-child {
+  border-bottom-left-radius: var(--radius);
+  border-bottom-right-radius: var(--radius);
+  border-top: none;
+}
+
 .details-menu {
-  border-block: 1px solid var(--surf-3);
+  border-block: var(--border);
   border-radius: var(--radius);
 }
 .details-menu summary {
-  border-inline: 1px solid var(--surf-3);
+  border-inline: var(--border);
   border-top-left-radius: var(--radius);
   border-top-right-radius: var(--radius);
 }
@@ -1129,8 +1210,8 @@ a > :where(code) {
   padding-left: 0;
 }
 .details-menu li {
-  border-inline: 1px solid var(--surf-3);
-  border-bottom: 1px solid var(--surf-3);
+  border-inline: var(--border);
+  border-bottom: var(--border);
   padding: 0.35rem 0.75rem;
 }
 .details-menu li:hover {
@@ -1152,24 +1233,23 @@ a > :where(code) {
   border: 1px solid var(--card-border);
   border-radius: var(--card-radius);
 }
-.card > * {
-  margin: -1px;
-  padding-inline: 1rem;
-}
-.card :first-child {
+.card .card-title {
   background-color: var(--card-bg);
   padding-block: 0.5rem;
+  margin: -1px;
   margin-bottom: 0.5rem;
   border: 1px solid var(--card-border);
   border-top-left-radius: var(--card-radius);
   border-top-right-radius: var(--card-radius);
   background-image: var(--gradient-2);
 }
+.card .card-title, .card .card-body {
+  padding-inline: 0.5rem;
+}
 .card p {
   margin-bottom: 0.5rem;
 }
 .card .btn, .card button {
-  margin-inline: 1rem;
   margin-top: auto;
   margin-bottom: 0.5rem;
 }
@@ -1178,7 +1258,7 @@ a > :where(code) {
   --card-border: var(--blue-light);
   --card-bg: var(--blue);
 }
-.card-blue :first-child {
+.card-blue .card-title {
   color: #fff;
 }
 
@@ -1186,7 +1266,7 @@ a > :where(code) {
   --card-border: var(--green-light);
   --card-bg: var(--green);
 }
-.card-green :first-child {
+.card-green .card-title {
   color: #fff;
 }
 
@@ -1194,7 +1274,7 @@ a > :where(code) {
   --card-border: var(--red-light);
   --card-bg: var(--red);
 }
-.card-red :first-child {
+.card-red .card-title {
   color: #fff;
 }
 
@@ -1202,7 +1282,7 @@ a > :where(code) {
   --card-border: var(--yellow-darker);
   --card-bg: var(--yellow);
 }
-.card-yellow :first-child {
+.card-yellow .card-title {
   color: #000;
 }
 
@@ -1210,7 +1290,7 @@ a > :where(code) {
   --card-border: var(--gray-8);
   --card-bg: var(--gray-10);
 }
-.card-dark :first-child {
+.card-dark .card-title {
   color: #fff;
 }
 
@@ -1314,71 +1394,54 @@ a > :where(code) {
   .g-1-xxl {
     --g-c: var(--g-1);
   }
-
   .g-2-xxl {
     --g-c: var(--g-2);
   }
-
   .g-3-xxl {
     --g-c: var(--g-3);
   }
-
   .g-4-xxl {
     --g-c: var(--g-4);
   }
-
   .g-5-xxl {
     --g-c: var(--g-5);
   }
-
   .g-6-xxl {
     --g-c: var(--g-6);
   }
-
   .g-7-xxl {
     --g-c: var(--g-7);
   }
-
   .g-8-xxl {
     --g-c: var(--g-8);
   }
-
   .g-9-xxl {
     --g-c: var(--g-9);
   }
-
   .g-10-xxl {
     --g-c: var(--g-10);
   }
-
   .g-11-xxl {
     --g-c: var(--g-11);
   }
-
   .g-12-xxl {
     --g-c: var(--g-12);
   }
-
   .gap-0-xxl {
     gap: 0;
   }
-
   .gap-1-xxl {
     gap: 0.25rem;
   }
-
   .gap-2-xxl {
     gap: 0.5rem;
   }
-
   .gap-3-xxl {
     gap: 1rem;
   }
-
   .gap-4-xxl {
     gap: 1.5rem;
   }
-
   .gap-5-xxl {
     gap: 2rem;
   }
@@ -1387,71 +1450,54 @@ a > :where(code) {
   .g-1-xl {
     --g-c: var(--g-1);
   }
-
   .g-2-xl {
     --g-c: var(--g-2);
   }
-
   .g-3-xl {
     --g-c: var(--g-3);
   }
-
   .g-4-xl {
     --g-c: var(--g-4);
   }
-
   .g-5-xl {
     --g-c: var(--g-5);
   }
-
   .g-6-xl {
     --g-c: var(--g-6);
   }
-
   .g-7-xl {
     --g-c: var(--g-7);
   }
-
   .g-8-xl {
     --g-c: var(--g-8);
   }
-
   .g-9-xl {
     --g-c: var(--g-9);
   }
-
   .g-10-xl {
     --g-c: var(--g-10);
   }
-
   .g-11-xl {
     --g-c: var(--g-11);
   }
-
   .g-12-xl {
     --g-c: var(--g-12);
   }
-
   .gap-0-xl {
     gap: 0;
   }
-
   .gap-1-xl {
     gap: 0.25rem;
   }
-
   .gap-2-xl {
     gap: 0.5rem;
   }
-
   .gap-3-xl {
     gap: 1rem;
   }
-
   .gap-4-xl {
     gap: 1.5rem;
   }
-
   .gap-5-xl {
     gap: 2rem;
   }
@@ -1460,71 +1506,54 @@ a > :where(code) {
   .g-1-lg {
     --g-c: var(--g-1);
   }
-
   .g-2-lg {
     --g-c: var(--g-2);
   }
-
   .g-3-lg {
     --g-c: var(--g-3);
   }
-
   .g-4-lg {
     --g-c: var(--g-4);
   }
-
   .g-5-lg {
     --g-c: var(--g-5);
   }
-
   .g-6-lg {
     --g-c: var(--g-6);
   }
-
   .g-7-lg {
     --g-c: var(--g-7);
   }
-
   .g-8-lg {
     --g-c: var(--g-8);
   }
-
   .g-9-lg {
     --g-c: var(--g-9);
   }
-
   .g-10-lg {
     --g-c: var(--g-10);
   }
-
   .g-11-lg {
     --g-c: var(--g-11);
   }
-
   .g-12-lg {
     --g-c: var(--g-12);
   }
-
   .gap-0-lg {
     gap: 0;
   }
-
   .gap-1-lg {
     gap: 0.25rem;
   }
-
   .gap-2-lg {
     gap: 0.5rem;
   }
-
   .gap-3-lg {
     gap: 1rem;
   }
-
   .gap-4-lg {
     gap: 1.5rem;
   }
-
   .gap-5-lg {
     gap: 2rem;
   }
@@ -1533,71 +1562,54 @@ a > :where(code) {
   .g-1-md {
     --g-c: var(--g-1);
   }
-
   .g-2-md {
     --g-c: var(--g-2);
   }
-
   .g-3-md {
     --g-c: var(--g-3);
   }
-
   .g-4-md {
     --g-c: var(--g-4);
   }
-
   .g-5-md {
     --g-c: var(--g-5);
   }
-
   .g-6-md {
     --g-c: var(--g-6);
   }
-
   .g-7-md {
     --g-c: var(--g-7);
   }
-
   .g-8-md {
     --g-c: var(--g-8);
   }
-
   .g-9-md {
     --g-c: var(--g-9);
   }
-
   .g-10-md {
     --g-c: var(--g-10);
   }
-
   .g-11-md {
     --g-c: var(--g-11);
   }
-
   .g-12-md {
     --g-c: var(--g-12);
   }
-
   .gap-0-md {
     gap: 0;
   }
-
   .gap-1-md {
     gap: 0.25rem;
   }
-
   .gap-2-md {
     gap: 0.5rem;
   }
-
   .gap-3-md {
     gap: 1rem;
   }
-
   .gap-4-md {
     gap: 1.5rem;
   }
-
   .gap-5-md {
     gap: 2rem;
   }
@@ -1606,71 +1618,54 @@ a > :where(code) {
   .g-1-sm {
     --g-c: var(--g-1);
   }
-
   .g-2-sm {
     --g-c: var(--g-2);
   }
-
   .g-3-sm {
     --g-c: var(--g-3);
   }
-
   .g-4-sm {
     --g-c: var(--g-4);
   }
-
   .g-5-sm {
     --g-c: var(--g-5);
   }
-
   .g-6-sm {
     --g-c: var(--g-6);
   }
-
   .g-7-sm {
     --g-c: var(--g-7);
   }
-
   .g-8-sm {
     --g-c: var(--g-8);
   }
-
   .g-9-sm {
     --g-c: var(--g-9);
   }
-
   .g-10-sm {
     --g-c: var(--g-10);
   }
-
   .g-11-sm {
     --g-c: var(--g-11);
   }
-
   .g-12-sm {
     --g-c: var(--g-12);
   }
-
   .gap-0-sm {
     gap: 0;
   }
-
   .gap-1-sm {
     gap: 0.25rem;
   }
-
   .gap-2-sm {
     gap: 0.5rem;
   }
-
   .gap-3-sm {
     gap: 1rem;
   }
-
   .gap-4-sm {
     gap: 1.5rem;
   }
-
   .gap-5-sm {
     gap: 2rem;
   }

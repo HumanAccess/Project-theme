@@ -8,15 +8,11 @@
   flex-direction: column;
   border: 1px solid var(--card-border);
   border-radius: var(--card-radius);
-  
-  > * {
-    margin: -1px;
-    padding-inline: 1rem;
-  }
-  
-  :first-child {
+   
+  .card-title {
     background-color: var(--card-bg);
     padding-block: .5rem;
+    margin: -1px;
     margin-bottom: .5rem;
     border: 1px solid var(--card-border);
     border-top-left-radius: var(--card-radius);
@@ -24,23 +20,24 @@
     background-image: var(--gradient-2);
   }
   
+  .card-title, .card-body {
+    padding-inline: .5rem;
+  }
+  
   p {
     margin-bottom: .5rem;
   }
   
   .btn, button {
-    margin-inline: 1rem;
     margin-top: auto;
     margin-bottom: .5rem;
   }
 }
 
-// Card colors
-
 .card-blue {
   --card-border: var(--blue-light); 
   --card-bg: var(--blue);  
-  :first-child {
+  .card-title {
     color: #fff;
   }  
 }
@@ -48,7 +45,7 @@
 .card-green {
   --card-border: var(--green-light); 
   --card-bg: var(--green);  
-  :first-child {
+  .card-title {
     color: #fff;
   }  
 }
@@ -56,7 +53,7 @@
 .card-red {
   --card-border: var(--red-light); 
   --card-bg: var(--red);  
-  :first-child {
+  .card-title {
     color: #fff;
   }  
 }
@@ -64,7 +61,7 @@
 .card-yellow {
   --card-border: var(--yellow-darker); 
   --card-bg: var(--yellow);  
-  :first-child {
+  .card-title {
     color: #000;
   }  
 }
@@ -72,7 +69,7 @@
 .card-dark {
   --card-border: var(--gray-8); 
   --card-bg: var(--gray-10);  
-  :first-child {
+  .card-title {
     color: #fff;
   }  
 }

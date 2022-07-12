@@ -148,14 +148,26 @@
   --btn-focus-hsl: var(--yellow-hsl);
 }
 
+// Button sizes
+
+.btn-xs {
+  --fs: var(--fs-xs);
+  --btn-padding: .15rem .5rem;
+}
+
 .btn-sm {
-  --fs: var(--fsf-sm);
-  --btn-padding: .15rem .75rem;
+  --fs: var(--fs-sm);
+  --btn-padding: .2rem .65rem;
 }
 
 .btn-lg {
-  --fs: var(--fsf-lgst);
-  --btn-padding: .5rem 1.5rem;
+  --fs: var(--fs-lgr);
+  --btn-padding: .5rem 1.25rem;
+}
+
+.btn-lgr {
+  --fs: var(--fs-lgst);
+  --btn-padding: .75rem 1.5rem;
 }
 
 .btn-group {

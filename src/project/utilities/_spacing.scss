@@ -1,34 +1,12 @@
 // Spacing
 
-.mb, .mb-0, .mb-xxs, .mb-xs, .mb-sm, .mb-lg, .mb-xl {
-  --mb: ;
+.mb-1, .mb-0, .mb-xxs, .mb-xs, .mb-sml, .mb-sm, .mb-lg, .mb-xl, .mb-xxl {
   margin-bottom: var(--mb);
 }
 
-.mb {
-  --mb: 1rem;
+@each $sizes, $value in $sizes {
+.mb-#{$sizes} {
+  --mb: #{$value};        
+  }
 }
 
-.mb-0 {
-  --mb: 0;
-}
-
-.mb-xxs {
-  --mb: .15rem;
-}
-
-.mb-xs {
-  --mb: .25rem;
-}
-
-.mb-sm {
-  --mb: .5rem;
-}
-
-.mb-lg {
-  --mb: 1.5rem;
-}
-
-.mb-xl {
-  --mb: 2rem;
-}

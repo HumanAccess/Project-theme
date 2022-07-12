@@ -1,0 +1,42 @@
+// Display
+
+// Widths and heights
+@each $percent, $value in $percent {
+.w-#{$percent} {
+  width: #{$value};        
+  }
+}
+
+@each $percent, $value in $percent {
+.h-#{$percent} {
+  height: #{$value};        
+  }
+}
+
+// Flex
+
+.flex, .flex-r, .flex-c {
+  display: flex;
+}
+
+.flex-i {
+  display: inline-flex;
+}
+
+.flex-r {
+  flex-direction: row;
+}
+
+.flex-c {
+  flex-direction: column;
+}
+
+// Block
+
+.block {
+  display: block;
+}
+
+.block-i {
+  display: inline-block;
+}
