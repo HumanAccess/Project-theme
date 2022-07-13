@@ -1,118 +1,149 @@
-// Accordions using <details> tag 
+// Accordions using <details> tag
 
-:where(.details, .details-menu, .details-code, .details-accordion) {
---mb: 1rem;
---radius: .25rem;
---border: 1px solid var(--surf-3);
-  margin-bottom: var(--mb);
-}
-   
-:where(.details, .details-menu, .details-code, .details-accordion) summary {
-  list-style: none;
-  padding: .5rem .75rem;
+.details, .details-group {
+--color: var(--text);
+--bg-color: inherit;
+--ico-color: var(--color);
+--border-color: var(--surf-4);
+--radius: .5rem;
+--padding: .5rem .75rem;
+
+  summary {
+  --fs: var(--fsf-lg);
+    color: var(--color);
+    font-size: var(--fs);  
+    background-color: var(--bg-color);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius);
+    list-style: none;
+    padding: var(--padding);
             
-  &:after {
-    --svg: var(--plus);  
-    @extend %svg-mask;   
-    float: right;
-    margin-top: 0.25rem;
-  }
-}
-
-.details-body {
-  padding: .5rem .75rem;
-  border-top: var(--border);
-  
-  :where(p, ol, ul, dl, address) {
-    margin-bottom: .5rem;
+    &:after {
+      --svg: var(--plus);  
+      @extend %svg-mask;   
+      float: right;
+      margin-top: calc(var(--fs) / 4);
+      opacity: .5;
+    }    
   }
   
-  :where(p, ol, ul, dl, address):last-child {
-    margin-bottom: 0;
+  .details-body {
+    border: 1px solid var(--border-color);
+    border-bottom-left-radius: var(--radius);
+    border-bottom-right-radius: var(--radius);
+    border-top: none;
+    padding: var(--padding);
+    
+    :where(p, ol, ul, dl, address) {
+      margin-bottom: .5rem;
+    }
+    
+    :last-child {
+      margin-bottom: 0;
+    }
   }
-}
-
-
-.details-menu[open] summary {
-  border-bottom: var(--border);
-} 
   
-.details-menu[open] summary:after, 
-.details-code[open] summary:after, 
-.details-accordion [open] summary:after {
-  --svg: var(--minus);
-} 
-
-.details, .details-code {
-  border: var(--border);
-  border-radius: var(--radius);
-}
-
-.details-code {
   pre {
     border: none;
-    margin-inline: -1px;
-    margin-bottom: -1px;
     border-bottom-left-radius: var(--radius); 
     border-bottom-right-radius: var(--radius);
+  } 
+}
+
+.details[open] summary, .details-group [open] summary {
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  
+  &:after {
+    --svg: var(--minus);
   }
 }
 
-.details-accordion > * {
-  border: var(--border);
-}
+// Details group (accordion)
 
-.details-accordion [open] {
-  margin-bottom: 0;
-}
+.details-group {
+--radius: 0;
 
-:where(.details-accordion > *):first-child {
-  border-top-left-radius: var(--radius);
-  border-top-right-radius: var(--radius);
-  border-bottom: none;
-}
-
-:where(.details-accordion > *):last-child {
-  border-bottom-left-radius: var(--radius);
-  border-bottom-right-radius: var(--radius);
-  border-top: none;
-}
-
-.details-menu {
-  border-block: var(--border); 
-  border-radius: var(--radius); 
-  
   summary {
-    border-inline: var(--border); 
-    border-top-left-radius: var(--radius); 
-    border-top-right-radius: var(--radius);
-  } 
+    border-bottom: none;
+  }
   
-  a {
-    text-decoration: none;
-    display: block;
-  } 
+  [open] {
+    margin-bottom: 0;
+    
+    summary {
+      border-bottom: 1px solid var(--border-color);
+    }
+  }
   
-  ul {  
+  :first-child summary {
+    border-top-left-radius: .5rem;
+    border-top-right-radius: .5rem;
+  }
+  
+  :last-child summary {
+    border-bottom-left-radius: .5rem;
+    border-bottom-right-radius: .5rem;
+    border-bottom: 1px solid var(--border-color);
+  }
+  
+  :last-child[open] summary {
+    border-radius: 0;
+  }
+  
+  .details-body {
+    border-radius: var(--radius);
+    border-bottom: none;
+  }
+  
+  :last-child .details-body {
+    border-bottom-left-radius: .5rem;
+    border-bottom-right-radius: .5rem;
+    border-bottom: 1px solid var(--border-color);
+  }
+}
+
+// Details group menu list
+
+.details-group {
+  
+  ul { 
     margin-bottom: 0;
     list-style: none;
     padding-left: 0;
+    
+    a {
+      text-decoration: none;
+      display: block;
+      padding: var(--padding);      
+    } 
   }   
   
   li {
-    border-inline: var(--border); 
-    border-bottom: var(--border); 
-    padding: .35rem .75rem;
+    border: 1px solid var(--border-color);
+    border-top: none;
     
     &:hover {
       background-color: var(--surf-2);
     }
   }
   
-  li:last-child {
-    border-bottom: none;
-    border-bottom-left-radius: var(--radius); 
-    border-bottom-right-radius: var(--radius);
-    margin-bottom: -0.031rem;
-  }    
+  [open] {
+  
+    li:last-child {
+      border-bottom: none;
+    }
+  }
+  
+  [open]:last-child {  
+  
+    li {
+      border-bottom: 1px solid var(--border-color);
+      
+      &:last-child {
+        border-bottom-left-radius: .5rem;
+        border-bottom-right-radius: .5rem;
+      }
+    }
+  }      
 }

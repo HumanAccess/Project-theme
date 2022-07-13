@@ -1,0 +1,37 @@
+// Colors
+// Load last
+
+.blue {
+--color: #fff;
+--bg-color: var(--blue);
+--ico-color: var(--color);
+--border-color: var(--blue);
+}
+
+.red {
+--color: #fff;
+--bg-color: var(--red);
+--ico-color: var(--color);
+--border-color: var(--red);
+}
+
+.green {
+--color: #fff;
+--bg-color: var(--green);
+--ico-color: var(--color);
+--border-color: var(--green);
+}
+
+.yellow {
+--color: #000;
+--bg-color: var(--yellow);
+--ico-color: var(--color);
+--border-color: var(--yellow-darker);
+}
+
+.dark {
+--color: #fff;
+--bg-color: var(--gray-10);
+--ico-color: var(--color);
+--border-color: var(--gray-10);
+}

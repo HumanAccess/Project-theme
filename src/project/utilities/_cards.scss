@@ -1,75 +1,29 @@
 // Cards
 
 .card {
---card-border: var(--surf-3);
---card-bg: var(--surf-2);
---card-radius: .25rem;
-  display: flex;
-  flex-direction: column;
-  border: 1px solid var(--card-border);
-  border-radius: var(--card-radius);
-   
-  .card-title {
-    background-color: var(--card-bg);
-    padding-block: .5rem;
-    margin: -1px;
-    margin-bottom: .5rem;
-    border: 1px solid var(--card-border);
-    border-top-left-radius: var(--card-radius);
-    border-top-right-radius: var(--card-radius);
-    background-image: var(--gradient-2);
-  }
-  
+--color: var(--text);
+--bg-color: inherit;
+--ico-color: var(--color);
+--border-color: var(--surf-4);
+--radius: .5rem;
+--padding: .5rem .75rem;
+
   .card-title, .card-body {
-    padding-inline: .5rem;
+    padding: .5rem .75rem;
+    border: 1px solid var(--border-color);
   }
   
-  p {
-    margin-bottom: .5rem;
+  .card-title {
+    color: var(--color);
+    border-top-left-radius: var(--radius);
+    border-top-right-radius: var(--radius);
+    background-color: var(--bg-color);
+    margin-bottom: 0;
   }
   
-  .btn, button {
-    margin-top: auto;
-    margin-bottom: .5rem;
+  .card-body {
+    border-top: none;
+    border-bottom-left-radius: var(--radius);
+    border-bottom-right-radius: var(--radius);
   }
-}
-
-.card-blue {
-  --card-border: var(--blue-light); 
-  --card-bg: var(--blue);  
-  .card-title {
-    color: #fff;
-  }  
-}
-
-.card-green {
-  --card-border: var(--green-light); 
-  --card-bg: var(--green);  
-  .card-title {
-    color: #fff;
-  }  
-}
-
-.card-red {
-  --card-border: var(--red-light); 
-  --card-bg: var(--red);  
-  .card-title {
-    color: #fff;
-  }  
-}
-
-.card-yellow {
-  --card-border: var(--yellow-darker); 
-  --card-bg: var(--yellow);  
-  .card-title {
-    color: #000;
-  }  
-}
-
-.card-dark {
-  --card-border: var(--gray-8); 
-  --card-bg: var(--gray-10);  
-  .card-title {
-    color: #fff;
-  }  
 }
