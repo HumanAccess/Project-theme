@@ -1,0 +1,18 @@
+// Gradients and shadows.
+
+:where(html) {
+--gradient-1: #{$gradient-1};
+--gradient-2: #{$gradient-2};
+--gradient-3: #{$gradient-3};
+--gradient-4: #{$gradient-4};
+--gradient-5: #{$gradient-5};
+--gradient-6: #{$gradient-6};
+--box-shadow-1: #{$box-shadow-1};
+--box-shadow-2: #{$box-shadow-2};
+--box-shadow-3: #{$box-shadow-3};
+--box-shadow-4: #{$box-shadow-4};
+--txt-shadow-1: #{$txt-shadow-1};
+--txt-shadow-2: #{$txt-shadow-2};
+--txt-shadow-3: #{$txt-shadow-3};
+--txt-shadow-4: #{$txt-shadow-4};
+}

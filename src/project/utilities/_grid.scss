@@ -1,4 +1,8 @@
-// Grid (needs work)
+// Grid
+// Generates auto fraction-width grids using wrapper utilities.
+// Eventually this will get overhauled but it currently has 
+// no individual column sizing, so at present it's not very
+// flexible beyond checkerboard type layouts.
 
 // Grid variables
 :where(html) {  

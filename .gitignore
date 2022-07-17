@@ -1,6 +1,9 @@
+/demo/
 /site/
 
 /src/style.scss
+/src/demo.scss
+/src/_scratchpad.scss
 /src/theme/
 *.ppr
 .hugo_build.lock

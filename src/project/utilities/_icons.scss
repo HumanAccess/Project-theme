@@ -1,5 +1,9 @@
 // SVG icons
-@import "svg";
+:where(html) {  
+    @each $icons, $value in $icons {
+    --#{$icons}: #{$value};
+  }
+}
 
 // SVG extend
 %svg-mask {
@@ -29,30 +33,8 @@
 }
 
 // Class utility icons
-.home {
---svg: var(--home);
-}
-
-.email {
---svg: var(--email);
-}
-
-.arrowup {
---svg: var(--arrowup);
-}
-
-.newtab {
---svg: var(--newtab);
-}
-
-.pagelink {
---svg: var(--pagelink);
-}
-
-.plus {
---svg: var(--plus);
-}
-
-.minus {
---svg: var(--minus);
+@each $icons, $value in $icons {
+.#{$icons} {
+  --svg: var(--#{$icons});        
+  }
 }

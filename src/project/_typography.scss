@@ -2,8 +2,10 @@
 
 :where(body, h1, h2, h3, h4, h5, h6) {
   --fs: ;
+  --fw: ;
   --lh: ;
   font-size: var(--fs);
+  font-weight: var(--fw);
   line-height: var(--lh);
 }
 
@@ -14,32 +16,28 @@
 }
 
 :where(body) {
---fs: var(--fs-base, 1rem);
---lh: 1.5;
-  font-family: var(--sans, sans-serif); 
-  font-weight: 400; 
-  color: var(--text);
-  background-color: var(--body-bg);
-  letter-spacing: -0.013rem;
-}
-
-:where(main) {
-  font-size: var(--fsf-lg);
+--fs: #{$font-size};
+--fw: #{$font-weight};
+--lh: #{$line-height};
+  font-family: #{$font-family}; 
+  color: #{$color};
+  background-color: #{$background-color};
+  letter-spacing: #{$letter-spacing};
 }
 
 :where(a) {
-  color: var(--link);
+  color: #{$link};
   overflow-wrap: break-word;
 }
 
 :where(a):hover, :where(a):focus {
-  color: var(--link-hover);
+  color: #{$link-hover};
   text-decoration: none;
 }
 
 :where(a):focus {
   outline-offset: .175em;
-  outline-color: var(--link-hover);
+  outline-color: #{$link-hover};
 }
 
 :where(a):focus:not(:focus-visible) {
@@ -62,28 +60,33 @@
 }
 
 :where(h1) {
---fs: var(--fsf-h1, 3rem);
-  font-weight: 800;
+--fs: #{$h1-fs};
+--fw: #{$h1-fw};
 }
 
 :where(h2) {
---fs: var(--fsf-h2, 2.3rem);
+--fs: #{$h2-fs};
+--fw: #{$h2-fw};
 }
 
 :where(h3) {
---fs: var(--fsf-h3, 1.8rem);
+--fs: #{$h3-fs};
+--fw: #{$h3-fw};
 }
 
 :where(h4) {
---fs: var(--fsf-h4, 1.5rem);
+--fs: #{$h4-fs};
+--fw: #{$h4-fw};
 }
 
 :where(h5) {
---fs: var(--fsf-h5, 1.3rem);
+--fs: #{$h5-fs};
+--fw: #{$h5-fw};
 }
 
 :where(h6) {
---fs: var(--fsf-h6, 1.1rem);
+--fs: #{$h6-fs};
+--fw: #{$h6-fw};
 }
 
 :where(p, ol, ul, dl, address) {
@@ -126,16 +129,16 @@
 }
 
 :where(small) {
---fs: var(--fs-sm, .875rem);
+--fs: #{$fs-small};
   font-size: var(--fs);
 }
 
 :where(sup, sub) {
-  font-size: var(--fs-xs);
+  font-size: #{$fs-sup-sub};
 }
 
 :where(code) {
-  color: var(--link);
+  color: #{$code-color};
   word-wrap: break-word;
 }
 
@@ -144,43 +147,38 @@ a > :where(code) {
 }
 
 :where(pre, code, kbd, samp) {
-  font-family: var(--monospace, monospace);
-  font-size: 1em;
+  font-family: #{$code-ff};
 }
 
 :where(pre) {
   display: block;
   margin-bottom: 1rem;
   overflow: auto;
-  font-size: inherit;
-  background-color: var(--surf-2);
-  border: 1px solid var(--surf-3);
+  background-color: #{$pre-bg-color};
+  border: 1px solid #{$pre-border-color};
   padding: 1rem;
 }
 
 :where(pre) code {
-  color: inherit;
-  font-size: inherit;
   word-break: normal;
 }
 
 :where(pre):focus {
   outline-width: medium;
   outline-offset: 3px;
-  outline-color: var(--surf-6);
+  outline-color: #{$pre-outline-color};
 }
 
 :where(kbd) {
   padding: .1rem .2rem;
-  font-size: var(--fs-sm, 0.875rem);
-  color: #fff;
-  background-color: var(--gray-9);
+  font-size: #{$kbd-fs};
+  color: #{$kbd-color};
+  background-color: #{$kbd-bg};
   border-radius: .25rem;
 }
 
 :where(kbd) kbd {
   padding: 0;
-  font-size: 1em;
   font-weight: bold;
 }
 
@@ -189,14 +187,14 @@ a > :where(code) {
 }
 
 :where(figcaption) {
-  font-size: var(--fs-sm, .875rem);
+  font-size: #{$figcaption};
 }
 
 :where(blockquote) {
-  font-size: var(--fs-lgst, 1.125rem);
+  font-size: #{$blockquote-fs};
   margin-bottom: 1rem;
   padding-bottom: .5rem;
-  border-bottom: 1px solid var(--surf-2);
+  border-bottom: 1px solid #{$blockquote-border-color};
 }
 
 :where(blockquote) p {
@@ -230,10 +228,6 @@ a > :where(code) {
   height: 0;
   overflow: visible;
   border: none;
-  border-top: 1px solid var(--surf-3);
+  border-top: 1px solid #{$hr-border-color};
   margin-bottom: 1rem;
-}
-
-:where([hidden]) {
-  display: none;
 }

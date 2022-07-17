@@ -3,33 +3,29 @@
 :where(button, [type="button"], [type="submit"], [type="reset"], [role="button"], .btn),
 :where(input[type="file"])::-webkit-file-upload-button,
 :where(input[type="file"])::file-selector-button {
-  --btn-color: var(--text);
-  --btn-size: var(--fs);
-  --btn-bg: inherit;
-  --btn-padding: .25rem .75rem;
-  --btn-border: transparent;
-  --btn-radius: 2px;
-  --btn-focus: 0 0 0 0.18rem hsla(var(--btn-focus-hsl), .5);
-  --btn-display: ;
-  --btn-width: ;
-  --ico-color: var(--btn-color);
+  --btn-color: #{$btn-color};
+  --btn-size: #{$btn-size};
+  --btn-bg: #{$btn-bg};
+  --btn-padding: #{$btn-padding};  
+  --btn-border-color: #{$btn-border-color};
+  --btn-border-width: #{$btn-border-width};
+  --btn-radius: #{$btn-radius};  
+  --btn-focus: #{$btn-focus};
+  --ico-color: #{$btn-ico-color};  
   color: var(--btn-color);
   font-size: var(--btn-size);
   padding: var(--btn-padding);
-  border: 1px solid var(--btn-border);
+  border: var(--btn-border-width) solid var(--btn-border-color);
   border-radius: var(--btn-radius);
   background-color: var(--btn-bg);
-  background-image: var(--gradient-1);
-  display: var(--btn-display);
-  width: var(--btn-width);
   cursor: pointer;
   -webkit-appearance: button; 
   appearance: button;
-  transition: border-color 0.1s, background-color 0.1s;
+  transition: #{$btn-transition};
 }
 
 :where([role="button"], .btn) {
---btn-display: inline-block;
+  display: inline-block;
   text-decoration: none;
 }
 
@@ -48,31 +44,31 @@
   color: var(--btn-focus-color);
   outline: 0;
   background-color: var(--btn-focus-bg);
-  border: 1px solid var(--btn-border);
+  border: 1px solid var(--btn-border-color);
   box-shadow: var(--btn-focus);
 }
 
+// File upload input button
+
 :where([type=file]) {
-  display: block;
-  width: 100%;
-  border: 1px solid var(--surf-4);
-  border-radius: .25rem;
+  display: #{$btn-file-input-display};
+  width: #{$btn-file-input-width};
+  border: 1px solid var(--surf-3);
+  border-radius: #{$btn-file-input-border-radius};
   overflow: hidden;
-  padding: 0;
+  padding: #{$btn-file-input-padding};
   cursor: pointer;
 }
 
 :where(input[type="file"])::-webkit-file-upload-button,
 :where(input[type="file"])::file-selector-button {
-  --btn-bg: var(--surf-2);
-  --btn-border: transparent;
-  --btn-hover-bg: var(--surf-3);
-  --btn-focus-bg: var(--surf-1);
-  --btn-focus-hsl: var(--text-hsl);
-  --btn-padding: .5rem 1rem; 
-  border-top-right-radius: 0;
-  border-bottom-right-radius: 0;
-  margin-right: .5rem;
+  --btn-bg: #{$btn-file-bg};
+  --btn-hover-bg: #{$btn-file-bg-hover};
+  --btn-padding: #{$btn-file-padding};
+  border-radius: #{$btn-file-radius};
+  border-top-right-radius: #{$btn-file-radius-right};
+  border-bottom-right-radius: #{$btn-file-radius-right};
+  margin-right: #{$btn-file-margin-right};
 }
 
 :where(input[type="file"])::file-selector-button:hover {
@@ -85,102 +81,121 @@
   background-color: var(--btn-hover-bg);
 }
 
+// Button styles
+
 :where(button, [type="button"], [role="button"], .btn) {
-  --btn-bg: var(--surf-2);
-  --btn-border: var(--surf-4);
-  --btn-hover-bg: var(--surf-3);
-  --btn-focus-bg: var(--surf-1);
-  --btn-focus-hsl: var(--text-hsl);
+  --btn-bg: #{$base-btn-bg};
+  --btn-border-color: #{$base-btn-border-color};
+  --btn-hover-bg: #{$base-btn-hover-bg};
+  --btn-focus-bg: #{$base-btn-focus-bg};
+  --btn-focus-hsl: #{$base-btn-focus-hsl};
+}
+
+:where([type="submit"]) {
+  --btn-color: #{$submit-btn-color};
+  --btn-bg: #{$submit-btn-bg};
+  --btn-border-color: #{$submit-btn-border-color};
+  --btn-hover-color: #{$submit-btn-hover-color};
+  --btn-hover-bg: #{$submit-btn-hover-bg};
+  --btn-focus-color: #{$submit-btn-focus-color};
+  --btn-focus-bg: #{$submit-btn-focus-bg};
+  --btn-focus-hsl: #{$submit-btn-focus-hsl};
+}
+
+:where([type="reset"]) {
+  --btn-color: #{$reset-btn-color};
+  --btn-bg: #{$reset-btn-bg};
+  --btn-border-color: #{$reset-btn-border-color};
+  --btn-hover-color: #{$reset-btn-hover-color};
+  --btn-hover-bg: #{$reset-btn-hover-bg};
+  --btn-focus-color: #{$reset-btn-focus-color};
+  --btn-focus-bg: #{$reset-btn-focus-bg};
+  --btn-focus-hsl: #{$reset-btn-focus-hsl};
 }
 
 :where(.btn-dark) {
-  --btn-color: #fff;
-  --btn-bg: var(--gray-10);
-  --btn-border: var(--gray-9);
-  --btn-hover-color: var(--btn-color);
-  --btn-hover-bg: var(--gray-9);
-  --btn-focus-color: var(--btn-color);
-  --btn-focus-bg: #000;
-  --btn-focus-hsl: var(--text-hsl); 
+  --btn-color: #{$dark-btn-color};
+  --btn-bg: #{$dark-btn-bg};
+  --btn-border-color: #{$dark-btn-border-color};
+  --btn-hover-color: #{$dark-btn-hover-color};
+  --btn-hover-bg: #{$dark-btn-hover-bg};
+  --btn-focus-color: #{$dark-btn-focus-color};
+  --btn-focus-bg: #{$dark-btn-focus-bg};
+  --btn-focus-hsl: #{$dark-btn-focus-hsl};
 }
 
-:where([type="reset"]), :where(.btn-red) {
-  --btn-color: #fff;
-  --btn-bg: var(--red);
-  --btn-border: var(--red-lighter);
-  --btn-hover-color: #fff;
-  --btn-hover-bg: var(--red-dark);
-  --btn-focus-color: var(--btn-color);
-  --btn-focus-bg: var(--red-darker);
-  --btn-focus-hsl: var(--red-hsl);
-}
-
-:where([type="submit"]), :where(.btn-blue) {
-  --btn-color: #fff;
-  --btn-bg: var(--blue);
-  --btn-border: var(--blue-light);
-  --btn-hover-color: var(--btn-color);
-  --btn-hover-bg: var(--blue-dark);
-  --btn-focus-color: var(--btn-color);
-  --btn-focus-bg: var(--blue-darker);
-  --btn-focus-hsl: var(--blue-hsl);
+:where(.btn-blue) {
+  --btn-color: #{$blue-btn-color};
+  --btn-bg: #{$blue-btn-bg};
+  --btn-border-color: #{$blue-btn-border-color};
+  --btn-hover-color: #{$blue-btn-hover-color};
+  --btn-hover-bg: #{$blue-btn-hover-bg};
+  --btn-focus-color: #{$blue-btn-focus-color};
+  --btn-focus-bg: #{$blue-btn-focus-bg};
+  --btn-focus-hsl: #{$blue-btn-focus-hsl};
 }
 
 :where(.btn-green) {
-  --btn-color: #fff;
-  --btn-bg: var(--green);
-  --btn-border: var(--green-light);
-  --btn-hover-color: #fff;
-  --btn-hover-bg: var(--green-dark);
-  --btn-focus-color: var(--btn-color);
-  --btn-focus-bg: var(--green-darker);
-  --btn-focus-hsl: var(--green-hsl);
+  --btn-color: #{$green-btn-color};
+  --btn-bg: #{$green-btn-bg};
+  --btn-border-color: #{$green-btn-border-color};
+  --btn-hover-color: #{$green-btn-hover-color};
+  --btn-hover-bg: #{$green-btn-hover-bg};
+  --btn-focus-color: #{$green-btn-focus-color};
+  --btn-focus-bg: #{$green-btn-focus-bg};
+  --btn-focus-hsl: #{$green-btn-focus-hsl};
+}
+
+:where(.btn-red) {
+  --btn-color: #{$red-btn-color};
+  --btn-bg: #{$red-btn-bg};
+  --btn-border-color: #{$red-btn-border-color};
+  --btn-hover-color: #{$red-btn-hover-color};
+  --btn-hover-bg: #{$red-btn-hover-bg};
+  --btn-focus-color: #{$red-btn-focus-color};
+  --btn-focus-bg: #{$red-btn-focus-bg};
+  --btn-focus-hsl: #{$red-btn-focus-hsl};
 }
 
 :where(.btn-yellow) {
-  --btn-color: #000;
-  --btn-bg: var(--yellow);
-  --btn-border: var(--yellow-light);
-  --btn-hover-color: var(--btn-color);
-  --btn-hover-bg: var(--yellow-dark);
-  --btn-focus-color: var(--btn-color);
-  --btn-focus-bg: var(--yellow-darker);
-  --btn-focus-hsl: var(--yellow-hsl);
+  --btn-color: #{$yellow-btn-color};
+  --btn-bg: #{$yellow-btn-bg};
+  --btn-border-color: #{$yellow-btn-border-color};
+  --btn-hover-color: #{$yellow-btn-hover-color};
+  --btn-hover-bg: #{$yellow-btn-hover-bg};
+  --btn-focus-color: #{$yellow-btn-focus-color};
+  --btn-focus-bg: #{$yellow-btn-focus-bg};
+  --btn-focus-hsl: #{$yellow-btn-focus-hsl};
 }
 
 // Button sizes
 
 .btn-xs {
-  --fs: var(--fs-xs);
-  --btn-padding: .15rem .5rem;
+  --fs: #{$btn-xs-fs};
+  --btn-padding: #{$btn-xs-padding};
 }
 
 .btn-sm {
-  --fs: var(--fs-sm);
-  --btn-padding: .2rem .65rem;
+  --fs: #{$btn-sm-fs};
+  --btn-padding: #{$btn-sm-padding};
 }
 
 .btn-lg {
-  --fs: var(--fs-lgr);
-  --btn-padding: .5rem 1.25rem;
+  --fs: #{$btn-lg-fs};
+  --btn-padding: #{$btn-lg-padding};
 }
 
 .btn-lgr {
-  --fs: var(--fs-lgst);
-  --btn-padding: .75rem 1.5rem;
+  --fs: #{$btn-lgr-fs};
+  --btn-padding: #{$btn-lgr-padding};
 }
+
+// Button groups and toolbars
 
 .btn-toolbar {
   display: flex;
   flex-direction: row;
-  
-  > * {
-    margin-right: .25rem;
-    
-    &:last-child {
-      margin-right: 0;
-    }
-  }
+  gap: #{$btn-toolbar-gap};
 }
 
 .btn-group {
@@ -195,15 +210,13 @@
 :where(.btn-group > *),
 :where(.btn-group-col > *) {
   --btn-radius: 0;
-  --btn-padding: .25rem .75rem;
 }
 
 :where(.btn-group > *):focus,
 :where(.btn-group-col > *):focus {
-  box-shadow: none;
-  background-image: none;
-  outline: inset thin;
-  outline-color: var(--btn-border);
+  box-shadow: #{$btn-group-focus-shadow};
+  outline: #{$btn-group-focus-outline};
+  outline-color: #{$btn-group-focus-color};
 }
 
 :where(.btn-group > *) {
@@ -216,16 +229,16 @@
 }
 
 :where(.btn-group > *):first-child {
-  --btn-radius: .25rem;
+  --btn-radius: #{$btn-radius};
   border-top-right-radius: 0;
   border-bottom-right-radius: 0;
 }
 
 :where(.btn-group > *):last-child {
-  --btn-radius: .25rem;
+  --btn-radius: #{$btn-radius};
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
-  border-right: 1px solid var(--btn-border);
+  border-right: var(--btn-border-width) solid var(--btn-border-color);
 }
 
 :where(.btn-group-col > *) {
@@ -239,14 +252,14 @@
 }
 
 :where(.btn-group-col > *):first-child {
-  --btn-radius: .25rem;
+  --btn-radius: #{$btn-radius};
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 0;
 }
 
 :where(.btn-group-col > *):last-child {
-  --btn-radius: .25rem;
+  --btn-radius: #{$btn-radius};
   border-top-left-radius: 0;
   border-top-right-radius: 0;
-  border-bottom: 1px solid var(--btn-border);
+  border-bottom: var(--btn-border-width) solid var(--btn-border-color);
 }

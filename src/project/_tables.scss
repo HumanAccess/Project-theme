@@ -1,53 +1,55 @@
 // Tables
 
-// Tables
-
 :where(table) {
-  caption-side: top;
+  caption-side: #{$table-cap-side};
   border-collapse: collapse;
-  width: 100%;
-  margin-bottom: 1rem;
-  vertical-align: top;
+  width: #{$table-width};
+  margin-bottom: #{$table-margin-bottom};
   font-variant-numeric: tabular-nums;
 }
 
 :where(caption) {
-  font-size: var(--fs-sm);
-  font-weight: bold;
-  text-align: left;
-  padding-bottom: .5rem;
+  font-size: #{$table-cap-fs};
+  font-weight: #{$table-cap-fw};
+  text-align: #{$table-cap-align};
+  padding-bottom: #{$table-cap-padding};
 }
 
 :where(th) {
-  font-weight: bold;
+  font-weight: #{$table-th-fw};
   text-align: inherit;
   text-align: -webkit-match-parent;
 }
 
 :where(thead, tbody, tfoot, tr, td, th) {
-  border-color: inherit;
+  border-color: #{$table-border-color};
   border-style: solid;
-  border-width: 0;
+  border-width: #{$table-border-width};
+  vertical-align: #{$table-valign};
 }
 
 :where(tbody, thead) th, :where(tbody, thead) td {
-  padding: .5rem 1rem; 
+  padding: #{$table-padding}; 
   white-space: nowrap;
 }
 
 :where(thead) th {
-  font-weight: bolder;
-  background-color: var(--surf-3);
-}
-
-:where(tr) {
-  border-bottom: 1px solid var(--surf-3);
-  &:hover {
-    background-color: var(--surf-2);
+  font-weight: #{$table-thead-fw};
+  background-color: #{$table-thead-bg-color};
+  border-right-color: #{$table-thead-border-right};;
+  
+  &:last-child {
+    border-right-color: #{$table-border-color};
   }
 }
 
-// Optional table wrapper utility for horizontal scrolling
+:where(tr) {
+  &:hover {
+    background-color: #{$table-tr-hover};
+  }
+}
+
+// Wrapper for horizontal scrolling
 .table-wrap {
   overflow-x: auto;
 }

@@ -15,9 +15,9 @@
 }
 
 :where(input, textarea, select) {
-  padding: .25rem .5rem;
+  padding: #{$form-padding};
   background-clip: padding-box;
-  border: 1px solid var(--surf-4);
+  border: #{$form-border};
 }
 
 :where(textarea) {
@@ -25,17 +25,11 @@
 }
 
 :where([type=checkbox], [type=radio]) {
-  width: 1em;
-  height: 1em;
-  margin-top: 0.21em;
-  margin-right: 0.1em;
-  vertical-align: top;
-}
-
-:where([type=color]) { 
-  cursor: pointer;
-  padding: 0;
-  border-radius: 0;
+  width: #{$check-size};
+  height: #{$check-size};
+  margin-top: #{$check-margin-top};
+  margin-right: #{$check-margin-right};
+  vertical-align: #{$check-valign};
 }
 
 :where(input[type="search"]) {
@@ -47,24 +41,24 @@
 }
 
 :where(select) {
-  color: var(--text);
+  color: #{$select-color};
   word-wrap: normal;
-  padding: .25rem;
-  background-color: var(--surf-1);
+  padding: #{$select-padding};
+  background-color: #{$select-bg-color};
 }
 
 :where(fieldset) {
   margin-bottom: .5rem;
-  border: 1px solid var(--surf-4);
-  border-radius: 2px;
+  border: #{$fieldset-border};
+  border-radius: #{$fieldset-border-radius};
 }
 
 :where(legend) {
   margin-bottom: .5rem;
-  border: 1px solid var(--surf-4);
-  border-radius: 2px;
-  background-color: var(--surf-2);
-  padding: .25rem .5rem;
+  border: #{$legend-border};
+  border-radius: #{$legend-border-radius};
+  background-color: #{$legend-bg-color};
+  padding: #{$legend-padding};
 }
 
 :where(output) {
@@ -76,10 +70,16 @@
 }
 
 :where([placeholder])::placeholder {
-  color: var(--text-light);
+  color: #{$placeholder-color};
+}
+
+:where([type=color]) { 
+  cursor: pointer;
+  padding: #{$input-color-padding};
+  border-radius: #{$input-color-border-radius};
 }
 
 :where(input[type="color"])::-webkit-color-swatch-wrapper {
-  padding: 0;
+  padding: #{$input-color-padding};
 }
 

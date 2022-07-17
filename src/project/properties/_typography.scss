@@ -1,0 +1,30 @@
+// Typography
+
+:where(html) {
+  --sans:  #{inspect($sans)};
+  --serif: #{$serif};
+  --monospace: #{$monospace};
+  --fs-base: #{$fs-base};
+  --fs-xs: #{$fs-xs};
+  --fs-sm: #{$fs-sm};
+  --fs-lg: #{$fs-lg};
+  --fs-lgr: #{$fs-lgr};
+  --fs-lgst: #{$fs-lgst};
+  --fs-h1: #{$fs-h1};
+  --fs-h2: #{$fs-h2};
+  --fs-h3: #{$fs-h3};
+  --fs-h4: #{$fs-h4};
+  --fs-h5: #{$fs-h5};
+  --fs-h6: #{$fs-h6};
+  --fsf-base: #{$fsf-base};
+  --fsf-sm: #{$fsf-sm};
+  --fsf-lg: #{$fsf-lg};
+  --fsf-lgr: #{$fsf-lgr};
+  --fsf-lgst: #{$fsf-lgst};
+  --fsf-h1: #{$fsf-h1};
+  --fsf-h2: #{$fsf-h2};
+  --fsf-h3: #{$fsf-h3};
+  --fsf-h4: #{$fsf-h4};
+  --fsf-h5: #{$fsf-h5};
+  --fsf-h6: #{$fsf-h6};
+}

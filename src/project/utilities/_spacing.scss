@@ -1,12 +1,147 @@
 // Spacing
 
-.mb-1, .mb-0, .mb-xxs, .mb-xs, .mb-sml, .mb-sm, .mb-lg, .mb-xl, .mb-xxl {
+
+// Margins
+.m-auto, .m-1, .m-0, .m-xxs, .m-xs, .m-sml, .m-sm, .m-lg, .m-xl, .m-xxl {
+  margin: var(--m);
+}
+
+.my-auto, .my-1, .my-0, .my-xxs, .my-xs, .my-sml, .my-sm, .my-lg, .my-xl, .my-xxl {
+  margin-block: var(--my);
+}
+
+.mx-auto, .mx-1, .mx-0, .mx-xxs, .mx-xs, .mx-sml, .mx-sm, .mx-lg, .mx-xl, .mx-xxl {
+  margin-inline: var(--mx);
+}
+
+.mt-auto, .mt-1, .mt-0, .mt-xxs, .mt-xs, .mt-sml, .mt-sm, .mt-lg, .mt-xl, .mt-xxl {
+  margin-top: var(--mt);
+}
+
+.mb-auto, .mb-1, .mb-0, .mb-xxs, .mb-xs, .mb-sml, .mb-sm, .mb-lg, .mb-xl, .mb-xxl {
   margin-bottom: var(--mb);
 }
 
-@each $sizes, $value in $sizes {
-.mb-#{$sizes} {
+.ml-auto, .ml-1, .ml-0, .ml-xxs, .ml-xs, .ml-sml, .ml-sm, .ml-lg, .ml-xl, .ml-xxl {
+  margin-left: var(--ml);
+}
+
+.mr-auto, .mr-1, .mr-0, .mr-xxs, .mr-xs, .mr-sml, .mr-sm, .mr-lg, .mr-xl, .mr-xxl {
+  margin-right: var(--mr);
+}
+
+// Padding
+
+.p-1, .p-0, .p-xxs, .p-xs, .p-sml, .p-sm, .p-lg, .p-xl, .p-xxl {
+  padding: var(--p);
+}
+
+.py-1, .py-0, .py-xxs, .py-xs, .py-sml, .py-sm, .py-lg, .py-xl, .py-xxl {
+  padding-block: var(--py);
+}
+
+.px-1, .px-0, .px-xxs, .px-xs, .px-sml, .px-sm, .px-lg, .px-xl, .px-xxl {
+  padding-inline: var(--px);
+}
+
+.pt-1, .pt-0, .pt-xxs, .pt-xs, .pt-sml, .pt-sm, .pt-lg, .pt-xl, .pt-xxl {
+  padding-top: var(--pt);
+}
+
+.pb-1, .pb-0, .pb-xxs, .pb-xs, .pb-sml, .pb-sm, .pb-lg, .pb-xl, .pb-xxl {
+  padding-bottom: var(--pb);
+}
+
+.pl-1, .pl-0, .pl-xxs, .pl-xs, .pl-sml, .pl-sm, .pl-lg, .pl-xl, .pl-xxl {
+  padding-left: var(--pl);
+}
+
+.pr-1, .pr-0, .pr-xxs, .pr-xs, .pr-sml, .pr-sm, .pr-lg, .pr-xl, .pr-xxl {
+  padding-right: var(--pr);
+}
+
+@each $margins, $value in $margins {
+.m-#{$margins} {
+  --m: #{$value};        
+  }
+}
+
+@each $margins, $value in $margins {
+.mx-#{$margins} {
+  --mx: #{$value};        
+  }
+}
+
+@each $margins, $value in $margins {
+.my-#{$margins} {
+  --my: #{$value};        
+  }
+}
+
+@each $margins, $value in $margins {
+.mt-#{$margins} {
+  --mt: #{$value};        
+  }
+}
+
+@each $margins, $value in $margins {
+.mb-#{$margins} {
   --mb: #{$value};        
   }
 }
 
+@each $margins, $value in $margins {
+.ml-#{$margins} {
+  --ml: #{$value};        
+  }
+}
+
+@each $margins, $value in $margins {
+.mr-#{$margins} {
+  --mr: #{$value};        
+  }
+}
+
+// Padding 
+
+@each $padding, $value in $padding {
+.p-#{$padding} {
+  --p: #{$value};        
+  }
+}
+
+@each $padding, $value in $padding {
+.px-#{$padding} {
+  --px: #{$value};        
+  }
+}
+
+@each $padding, $value in $padding {
+.py-#{$padding} {
+  --py: #{$value};        
+  }
+}
+
+@each $padding, $value in $padding {
+.pt-#{$padding} {
+  --pt: #{$value};        
+  }
+}
+
+@each $padding, $value in $padding {
+.pb-#{$padding} {
+  --pb: #{$value};        
+  }
+}
+
+@each $padding, $value in $padding {
+.pl-#{$padding} {
+  --pl: #{$value};        
+  }
+}
+
+@each $padding, $value in $padding {
+.pr-#{$padding} {
+  --pr: #{$value};        
+  }
+}

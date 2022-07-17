@@ -1,0 +1,88 @@
+// Color schemes Sass and CSS variables
+
+:root {
+  color-scheme: light dark;
+}
+
+:where(html) {
+  --day-mode: #{$day-mode};
+  --night-mode: #{$night-mode};
+}
+
+// Each color scheme requires duplication to work with JS manual
+// switching and @media prefers options.
+
+:where(html) {
+  color-scheme: #{$lm-color-scheme};
+  --text: #{$lm-text};
+  --text-hsl: #{$lm-text-hsl};
+  --text-light: #{$lm-text-light};
+  --link: #{$lm-link};
+  --link-hover: #{$lm-link-hover};
+  --surf-1: #{$lm-surf-1};
+  --surf-2: #{$lm-surf-2};
+  --surf-3: #{$lm-surf-3};
+  --surf-4: #{$lm-surf-4};
+  --surf-5: #{$lm-surf-5};
+  --surf-6: #{$lm-surf-6};
+  --surf-7: #{$lm-surf-7};
+  --body-bg: #{$lm-body-bg};
+  --modeswitch-svg: #{$lm-modeswitch-svg};
+}
+
+:where(body.dark-theme) {
+  color-scheme: #{$dm-color-scheme};
+  --text: #{$dm-text};
+  --text-hsl: #{$dm-text-hsl};
+  --text-light: #{$dm-text-light};
+  --link: #{$dm-link};
+  --link-hover: #{$dm-link-hover};
+  --surf-1: #{$dm-surf-1};
+  --surf-2: #{$dm-surf-2};
+  --surf-3: #{$dm-surf-3};
+  --surf-4: #{$dm-surf-4};
+  --surf-5: #{$dm-surf-5};
+  --surf-6: #{$dm-surf-6};
+  --surf-7: #{$dm-surf-7};
+  --body-bg: #{$dm-body-bg};
+  --modeswitch-svg: #{$dm-modeswitch-svg};
+}
+
+@media (prefers-color-scheme: dark) {
+:where(html) {
+  color-scheme: #{$dm-color-scheme};
+  --text: #{$dm-text};
+  --text-hsl: #{$dm-text-hsl};
+  --text-light: #{$dm-text-light};
+  --link: #{$dm-link};
+  --link-hover: #{$dm-link-hover};
+  --surf-1: #{$dm-surf-1};
+  --surf-2: #{$dm-surf-2};
+  --surf-3: #{$dm-surf-3};
+  --surf-4: #{$dm-surf-4};
+  --surf-5: #{$dm-surf-5};
+  --surf-6: #{$dm-surf-6};
+  --surf-7: #{$dm-surf-7};
+  --body-bg: #{$dm-body-bg};
+  --modeswitch-svg: #{$dm-modeswitch-svg};
+}
+}
+@media (prefers-color-scheme: dark) { 
+:where(html) body.light-theme {
+  color-scheme: #{$lm-color-scheme};
+  --text: #{$lm-text};
+  --text-hsl: #{$lm-text-hsl};
+  --text-light: #{$lm-text-light};
+  --link: #{$lm-link};
+  --link-hover: #{$lm-link-hover};
+  --surf-1: #{$lm-surf-1};
+  --surf-2: #{$lm-surf-2};
+  --surf-3: #{$lm-surf-3};
+  --surf-4: #{$lm-surf-4};
+  --surf-5: #{$lm-surf-5};
+  --surf-6: #{$lm-surf-6};
+  --surf-7: #{$lm-surf-7};
+  --body-bg: #{$lm-body-bg};
+  --modeswitch-svg: #{$lm-modeswitch-svg};
+}
+}
