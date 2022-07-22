@@ -1,28 +1,28 @@
 // Colors
 
 :where(html) {
-  --blue-hsl: #{$blue};
-  --blue: hsl(#{$blue});     
-  --blue-light: hsl(#{$blue-light});
-  --blue-lighter: hsl(#{$blue-lighter});
-  --blue-dark: hsl(#{$blue-dark});
-  --blue-darker: hsl(#{$blue-darker});  
-  --red-hsl: #{$red};
-  --red: hsl(#{$red}); 
-  --red-light: hsl(#{$red-light});
-  --red-lighter: hsl(#{$red-lighter});
-  --red-dark: hsl(#{$red-dark});
-  --red-darker: hsl(#{$red-darker});
+  --blue-hsl: #{$blue};     
+  --blue-1: hsl(#{$blue-1});
+  --blue-2: hsl(#{$blue-2});
+  --blue-3: hsl(#{$blue-3});
+  --blue-4: hsl(#{$blue-4});
+  --blue-5: hsl(#{$blue-5});    
   --green-hsl: #{$green};
-  --green: hsl(#{$green});  
-  --green-light: hsl(#{$green-light});
-  --green-lighter: hsl(#{$green-lighter});
-  --green-dark: hsl(#{$green-dark});
-  --green-darker: hsl(#{$green-darker});
+  --green-1: hsl(#{$green-1});
+  --green-2: hsl(#{$green-2});
+  --green-3: hsl(#{$green-3});
+  --green-4: hsl(#{$green-4});
+  --green-5: hsl(#{$green-5});   
+  --red-hsl: #{$red};
+  --red-1: hsl(#{$red-1});
+  --red-2: hsl(#{$red-2});
+  --red-3: hsl(#{$red-3});
+  --red-4: hsl(#{$red-4});
+  --red-5: hsl(#{$red-5});   
   --yellow-hsl: #{$yellow};
-  --yellow: hsl(#{$yellow});  
-  --yellow-light: hsl(#{$yellow-light});
-  --yellow-lighter: hsl(#{$yellow-lighter});
-  --yellow-dark: hsl(#{$yellow-dark});
-  --yellow-darker: hsl(#{$yellow-darker});
+  --yellow-1: hsl(#{$yellow-1});
+  --yellow-2: hsl(#{$yellow-2});
+  --yellow-3: hsl(#{$yellow-3});
+  --yellow-4: hsl(#{$yellow-4});
+  --yellow-5: hsl(#{$yellow-5}); 
 }

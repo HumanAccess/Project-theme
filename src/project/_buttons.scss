@@ -53,7 +53,7 @@
 :where([type=file]) {
   display: #{$btn-file-input-display};
   width: #{$btn-file-input-width};
-  border: 1px solid var(--surf-3);
+  border: #{$btn-file-input-border};
   border-radius: #{$btn-file-input-border-radius};
   overflow: hidden;
   padding: #{$btn-file-input-padding};

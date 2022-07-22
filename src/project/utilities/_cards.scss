@@ -5,11 +5,11 @@
 --bg-color: inherit;
 --ico-color: var(--color);
 --border-color: var(--surf-4);
---radius: .5rem;
+--radius: .25rem;
 --padding: .5rem .75rem;
 
   .card-title, .card-body {
-    padding: .5rem .75rem;
+    padding: var(--padding);
     border: 1px solid var(--border-color);
   }
   

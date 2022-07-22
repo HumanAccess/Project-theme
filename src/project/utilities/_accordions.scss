@@ -5,7 +5,7 @@
 --bg-color: inherit;
 --ico-color: var(--color);
 --border-color: var(--surf-4);
---radius: .5rem;
+--radius: .25rem;
 --padding: .5rem .75rem;
 
   summary {
@@ -77,13 +77,13 @@
   }
   
   :first-child summary {
-    border-top-left-radius: .5rem;
-    border-top-right-radius: .5rem;
+    border-top-left-radius: .25rem;
+    border-top-right-radius: .25rem;
   }
   
   :last-child summary {
-    border-bottom-left-radius: .5rem;
-    border-bottom-right-radius: .5rem;
+    border-bottom-left-radius: .25rem;
+    border-bottom-right-radius: .25rem;
     border-bottom: 1px solid var(--border-color);
   }
   
@@ -97,8 +97,8 @@
   }
   
   :last-child .details-body {
-    border-bottom-left-radius: .5rem;
-    border-bottom-right-radius: .5rem;
+    border-bottom-left-radius: .25rem;
+    border-bottom-right-radius: .25rem;
     border-bottom: 1px solid var(--border-color);
   }
 }
@@ -115,13 +115,14 @@
     a {
       text-decoration: none;
       display: block;
-      padding: var(--padding);      
+           
     } 
   }   
   
   li {
     border: 1px solid var(--border-color);
     border-top: none;
+    padding: var(--padding); 
     
     &:hover {
       background-color: var(--surf-2);
@@ -141,8 +142,8 @@
       border-bottom: 1px solid var(--border-color);
       
       &:last-child {
-        border-bottom-left-radius: .5rem;
-        border-bottom-right-radius: .5rem;
+        border-bottom-left-radius: .25rem;
+        border-bottom-right-radius: .25rem;
       }
     }
   }      

@@ -2,319 +2,143 @@
 
 // Typography
 // Font families
-$sans: "Libre Franklin", system-ui, -apple-system, "Helvetica Neue", Arial, sans-serif !default;
-$serif: Georgia, ui-serif, serif !default;
+$sans:      "Libre Franklin", system-ui, -apple-system, "Helvetica Neue", Arial, sans-serif !default;
+$serif:     Georgia, ui-serif, serif !default;
 $monospace: Consolas, Menlo, Monaco, SFMono-Regular, monospace !default;
 
 // Static font sizes
-$fs-base: 1rem;
-$fs-xs: calc(var(--fs-base) * .75) !default;
-$fs-sm: calc(var(--fs-base) * .875) !default;
-$fs-lg: calc(var(--fs-base) * 1.063) !default;
-$fs-lgr: calc(var(--fs-base) * 1.125) !default;
-$fs-lgst: calc(var(--fs-base) * 1.25) !default;
-$fs-h1: calc(var(--fs-base) * 3) !default;
-$fs-h2: calc(var(--fs-base) * 2.3) !default;
-$fs-h3: calc(var(--fs-base) * 1.8) !default;
-$fs-h4: calc(var(--fs-base) * 1.5) !default;
-$fs-h5: calc(var(--fs-base) * 1.3) !default;
-$fs-h6: calc(var(--fs-base) * 1.1) !default;
+$fs-base:   1rem;
+$fs-xs:     calc(var(--fs-base) * .75) !default;
+$fs-sm:     calc(var(--fs-base) * .875) !default;
+$fs-lg:     calc(var(--fs-base) * 1.063) !default;
+$fs-lgr:    calc(var(--fs-base) * 1.125) !default;
+$fs-lgst:   calc(var(--fs-base) * 1.25) !default;
+$fs-h1:     calc(var(--fs-base) * 3) !default;
+$fs-h2:     calc(var(--fs-base) * 2.3) !default;
+$fs-h3:     calc(var(--fs-base) * 1.8) !default;
+$fs-h4:     calc(var(--fs-base) * 1.5) !default;
+$fs-h5:     calc(var(--fs-base) * 1.3) !default;
+$fs-h6:     calc(var(--fs-base) * 1.1) !default;
 
 // Fluid font sizes
 // Sizes are calculated on screen widths 1920px to 400px using
 // https://www.fluid-type-scale.com/ by Aleksandr Hovhannisyan.
-$fsf-base: clamp(0.94rem, 0.07vw + 0.92rem, 1rem) !default;
-$fsf-sm: clamp(0.75rem, 0.22vw + 0.7rem, 0.87rem) !default;
-$fsf-lg: clamp(1rem, 0.11vw + 0.97rem, 1.06rem) !default;
-$fsf-lgr: clamp(1.06rem, 0.11vw + 1.03rem, 1.13rem) !default;
-$fsf-lgst: clamp(1.13rem, 0.23vw + 1.07rem, 1.25rem) !default;
-$fsf-h1: clamp(2.4rem, 1.09vw + 2.13rem, 3rem) !default;
-$fsf-h2: clamp(1.8rem, 0.91vw + 1.57rem, 2.3rem) !default;
-$fsf-h3: clamp(1.5rem, 0.55vw + 1.36rem, 1.8rem) !default;
-$fsf-h4: clamp(1.38rem, 0.23vw + 1.32rem, 1.5rem) !default;
-$fsf-h5: clamp(1.18rem, 0.23vw + 1.12rem, 1.3rem) !default;
-$fsf-h6: clamp(1.06rem, 0.07vw + 1.05rem, 1.1rem) !default;
+$fsf-base:  clamp(0.94rem, 0.07vw + 0.92rem, 1rem) !default;
+$fsf-sm:    clamp(0.75rem, 0.22vw + 0.7rem, 0.87rem) !default;
+$fsf-lg:    clamp(1rem, 0.11vw + 0.97rem, 1.06rem) !default;
+$fsf-lgr:   clamp(1.06rem, 0.11vw + 1.03rem, 1.13rem) !default;
+$fsf-lgst:  clamp(1.13rem, 0.23vw + 1.07rem, 1.25rem) !default;
+$fsf-h1:    clamp(2.4rem, 1.09vw + 2.13rem, 3rem) !default;
+$fsf-h2:    clamp(1.8rem, 0.91vw + 1.57rem, 2.3rem) !default;
+$fsf-h3:    clamp(1.5rem, 0.55vw + 1.36rem, 1.8rem) !default;
+$fsf-h4:    clamp(1.38rem, 0.23vw + 1.32rem, 1.5rem) !default;
+$fsf-h5:    clamp(1.18rem, 0.23vw + 1.12rem, 1.3rem) !default;
+$fsf-h6:    clamp(1.06rem, 0.07vw + 1.05rem, 1.1rem) !default;
 
 // Mono colors
-$gray-1: 0, 0%, 97% !default;
-$gray-2: 0, 0%, 91% !default;
-$gray-3: 0, 0%, 85% !default;
-$gray-4: 0, 0%, 75% !default;
-$gray-5: 0, 0%, 67% !default;
-$gray-6: 0, 0%, 57% !default;
-$gray-7: 0, 0%, 45% !default;
-$gray-8: 0, 0%, 36% !default;
-$gray-9: 0, 0%, 25% !default;
+$gray-1:  0, 0%, 97% !default;
+$gray-2:  0, 0%, 91% !default;
+$gray-3:  0, 0%, 85% !default;
+$gray-4:  0, 0%, 75% !default;
+$gray-5:  0, 0%, 67% !default;
+$gray-6:  0, 0%, 57% !default;
+$gray-7:  0, 0%, 45% !default;
+$gray-8:  0, 0%, 36% !default;
+$gray-9:  0, 0%, 25% !default;
 $gray-10: 0, 0%, 15% !default;
 $gray-11: 0, 0%, 11% !default;
 $gray-12: 0, 0%, 3% !default;
 
 // Primary colors
-$blue-h: 240 !default;
-$blue-s: 45% !default;
-$blue-l: 50% !default;
-$blue: $blue-h, $blue-s, $blue-l !default;
-$blue-light: $blue-h, $blue-s, 62% !default;
-$blue-lighter: $blue-h, $blue-s, 70% !default;
-$blue-dark: $blue-h, $blue-s, 35% !default;
-$blue-darker: $blue-h, $blue-s, 25% !default;
-$green-h: 120 !default;
-$green-s: 50% !default;
-$green-l: 30% !default;
-$green: $green-h, $green-s, $green-l !default;
-$green-light: $green-h, $green-s, 40% !default;
-$green-lighter: $green-h, $green-s, 55% !default;
-$green-dark: $green-h, $green-s, 22% !default;
-$green-darker: $green-h, $green-s, 16% !default;
-$red-h: 0 !default;
-$red-s: 100% !default;
-$red-l: 35% !default;
-$red: $red-h, $red-s, $red-l !default;
-$red-light: $red-h, $red-s, 45% !default;
-$red-lighter: $red-h, $red-s, 65% !default;
-$red-dark: $red-h, $red-s, 25% !default;
-$red-darker: $red-h, $red-s, 15% !default;
-$yellow-h: 60 !default;
-$yellow-s: 100% !default;
-$yellow-l: 57% !default;
-$yellow: $yellow-h, $yellow-s, $yellow-l !default;
-$yellow-light: $yellow-h, $yellow-s, 69% !default;
-$yellow-lighter: $yellow-h, $yellow-s, 80% !default;
-$yellow-dark: $yellow-h, $yellow-s, 47% !default;
-$yellow-darker: $yellow-h, $yellow-s, 44% !default;
+$blue-h:    240 !default;
+$blue-s:    45% !default;
+$blue-l:    50% !default;
+$blue:      $blue-h, $blue-s, $blue-l !default;
+$blue-1:    $blue-h, $blue-s, 70% !default;
+$blue-2:    $blue-h, $blue-s, 62% !default;
+$blue-3:    $blue-h, $blue-s, $blue-l !default; // Base color
+$blue-4:    $blue-h, $blue-s, 35% !default;
+$blue-5:    $blue-h, $blue-s, 25% !default;
+$green-h:   120 !default;
+$green-s:   50% !default;
+$green-l:   30% !default;
+$green:     $green-h, $green-s, $green-l !default;
+$green-1:   $green-h, $green-s, 55% !default;
+$green-2:   $green-h, $green-s, 40% !default;
+$green-3:   $green-h, $green-s, $green-l !default; // Base color
+$green-4:   $green-h, $green-s, 22% !default;
+$green-5:   $green-h, $green-s, 16% !default;
+$red-h:     0 !default;
+$red-s:     100% !default;
+$red-l:     35% !default;
+$red:       $red-h, $red-s, $red-l !default;
+$red-1:     $red-h, $red-s, 65% !default;
+$red-2:     $red-h, $red-s, 45% !default;
+$red-3:     $red-h, $red-s, $red-l !default; // Base color
+$red-4:     $red-h, $red-s, 25% !default;
+$red-5:     $red-h, $red-s, 15% !default;
+$yellow-h:  60 !default;
+$yellow-s:  100% !default;
+$yellow-l:  52% !default;
+$yellow:    $yellow-h, $yellow-s, $yellow-l !default;
+$yellow-1:  $yellow-h, $yellow-s, 80% !default;
+$yellow-2:  $yellow-h, $yellow-s, 69% !default;
+$yellow-3:  $yellow-h, $yellow-s, $yellow-l !default; // Base color
+$yellow-4:  $yellow-h, $yellow-s, 47% !default;
+$yellow-5:  $yellow-h, $yellow-s, 42% !default;
+
 
 // Color schemes
 // Mode switching button SVGs
-$day-mode: url("data:image/svg+xml,<svg viewBox='0 0 16 16' fill='currentColor' xmlns='http://www.w3.org/2000/svg'><path fill-rule='evenodd' d='m7.47 0v2.26h1.15v-2.26zm-4.9 2.19-0.812 0.8 1.62 1.6 0.812-0.8zm10.8 0-1.62 1.6 0.812 0.8 1.62-1.6zm-5.29 1.25s-4.59 0-4.59 4.52c0 4.52 4.59 4.52 4.59 4.52s4.59 0 4.59-4.52c0-4.52-4.59-4.52-4.59-4.52zm5.67 3.92v1.13h2.3v-1.13zm-13.7 0.0243v1.13h2.3v-1.13zm3.01 4-1.62 1.6 0.812 0.8 1.62-1.6zm9.99 0-0.812 0.8 1.62 1.6 0.812-0.8zm-5.54 2.36v2.26h1.15v-2.26z' clip-rule='evenodd'/></svg>");
-$night-mode: url("data:image/svg+xml,<svg viewBox='0 0 16 16' fill='currentColor' xmlns='http://www.w3.org/2000/svg'><path fill-rule='evenodd' d='m3.6 1s-2.27 2.27-2.5 5.39c-0.308 1.82 0.062 4.02 2.26 6.22 2.06 2.06 4.11 2.51 5.86 2.31 3.46-0.231 5.79-2.51 5.79-2.51s-4.21 1.35-8.48-2.93c-4.26-4.26-2.9-8.46-2.9-8.46z' clip-rule='evenodd'/></svg>");
+$day-mode:    url("data:image/svg+xml,<svg viewBox='0 0 16 16' fill='currentColor' xmlns='http://www.w3.org/2000/svg'><path fill-rule='evenodd' d='m7.47 0v2.26h1.15v-2.26zm-4.9 2.19-0.812 0.8 1.62 1.6 0.812-0.8zm10.8 0-1.62 1.6 0.812 0.8 1.62-1.6zm-5.29 1.25s-4.59 0-4.59 4.52c0 4.52 4.59 4.52 4.59 4.52s4.59 0 4.59-4.52c0-4.52-4.59-4.52-4.59-4.52zm5.67 3.92v1.13h2.3v-1.13zm-13.7 0.0243v1.13h2.3v-1.13zm3.01 4-1.62 1.6 0.812 0.8 1.62-1.6zm9.99 0-0.812 0.8 1.62 1.6 0.812-0.8zm-5.54 2.36v2.26h1.15v-2.26z' clip-rule='evenodd'/></svg>");
+$night-mode:  url("data:image/svg+xml,<svg viewBox='0 0 16 16' fill='currentColor' xmlns='http://www.w3.org/2000/svg'><path fill-rule='evenodd' d='m3.6 1s-2.27 2.27-2.5 5.39c-0.308 1.82 0.062 4.02 2.26 6.22 2.06 2.06 4.11 2.51 5.86 2.31 3.46-0.231 5.79-2.51 5.79-2.51s-4.21 1.35-8.48-2.93c-4.26-4.26-2.9-8.46-2.9-8.46z' clip-rule='evenodd'/></svg>");
 
 // Light mode color scheme
-$lm-color-scheme: light;
-$lm-text: #000 !default;
-$lm-text-hsl: 0, 0%, 0% !default;
-$lm-text-light: var(--gray-9) !default;
-$lm-link: var(--blue) !default;
-$lm-link-hover: var(--blue-lighter) !default;
-$lm-surf-1: #fff !default;
-$lm-surf-2: var(--gray-1) !default;
-$lm-surf-3: var(--gray-2) !default;
-$lm-surf-4: var(--gray-3) !default;
-$lm-surf-5: var(--gray-4) !default;
-$lm-surf-6: var(--gray-5) !default;
-$lm-surf-7: var(--gray-6) !default;
-$lm-body-bg: var(--surf-1) !default;
-$lm-modeswitch-svg: var(--day-mode) !default;
+$lm-color-scheme:     light;
+$lm-text:             #000 !default;
+$lm-text-hsl:         0, 0%, 0% !default;
+$lm-text-light:       var(--gray-7) !default;
+$lm-link:             var(--blue-3) !default;
+$lm-link-hover:       var(--blue-1) !default;
+$lm-surf-1:           #fff !default;
+$lm-surf-2:           var(--gray-1) !default;
+$lm-surf-3:           var(--gray-2) !default;
+$lm-surf-4:           var(--gray-3) !default;
+$lm-surf-5:           var(--gray-4) !default;
+$lm-surf-6:           var(--gray-5) !default;
+$lm-surf-7:           var(--gray-6) !default;
+$lm-body-bg:          var(--surf-1) !default;
+$lm-modeswitch-svg:   var(--day-mode) !default;
 
 // Dark mode color scheme
-$dm-color-scheme: dark;
-$dm-text: #fff !default;
-$dm-text-hsl: 0, 0%, 100% !default;
-$dm-text-light: var(--gray-2) !default;
-$dm-link: var(--blue-light) !default;
-$dm-link-hover: var(--blue-lighter) !default;
-$dm-surf-1: #000 !default;
-$dm-surf-2: var(--gray-12) !default;
-$dm-surf-3: var(--gray-11) !default;
-$dm-surf-4: var(--gray-10) !default;
-$dm-surf-5: var(--gray-9) !default;
-$dm-surf-6: var(--gray-8) !default;
-$dm-surf-7: var(--gray-7) !default;
-$dm-body-bg: var(--surf-1) !default;
-$dm-modeswitch-svg: var(--night-mode) !default;
+$dm-color-scheme:     dark;
+$dm-text:             #fff !default;
+$dm-text-hsl:         0, 0%, 100% !default;
+$dm-text-light:       var(--gray-6) !default;
+$dm-link:             var(--blue-2) !default;
+$dm-link-hover:       var(--blue-1) !default;
+$dm-surf-1:           #000 !default;
+$dm-surf-2:           var(--gray-12) !default;
+$dm-surf-3:           var(--gray-11) !default;
+$dm-surf-4:           var(--gray-10) !default;
+$dm-surf-5:           var(--gray-9) !default;
+$dm-surf-6:           var(--gray-8) !default;
+$dm-surf-7:           var(--gray-7) !default;
+$dm-body-bg:          var(--surf-1) !default;
+$dm-modeswitch-svg:   var(--night-mode) !default;
 
 // Gradients and shadows
-$gradient-1: linear-gradient(180deg, hsla(0, 0%, 100%, .075), hsla(0, 0%, 100%, 0)) !default;
-$gradient-2: linear-gradient(180deg, hsla(0, 0%, 100%, .2), hsla(0, 0%, 100%, 0)) !default;
-$gradient-3: linear-gradient(180deg, hsla(0, 0%, 100%, .3), hsla(0, 0%, 100%, 0)) !default;
-$gradient-4: linear-gradient(180deg, hsla(0, 0%, 100%, .4), hsla(0, 0%, 100%, 0)) !default;
-$gradient-5: linear-gradient(180deg, hsla(0, 0%, 100%, .5), hsla(0, 0%, 100%, 0)) !default;
-$gradient-6: linear-gradient(180deg, hsla(0, 0%, 100%, .6), hsla(0, 0%, 100%, 0)) !default;
-$box-shadow-1: 0 0.125rem 0.25rem hsla(0, 0%, 0%, 0.075) !default;
-$box-shadow-2: 0 0.063rem 0.125rem hsla(0, 0%, 0%, 0.4) !default;
-$box-shadow-3: 0 0.156rem 0.25rem hsla(0, 0%, 0%, 0.4) !default;
-$box-shadow-4: 0 0.172rem 0.35rem hsla(0, 0%, 0%, 0.35) !default;
-$txt-shadow-1: 0.03rem 0.05rem 0.094rem hsla(0, 0%, 0%, 0.5) !default;
-$txt-shadow-2: 0.03rem 0.08rem 0.094rem hsla(0, 0%, 0%, 0.5) !default;
-$txt-shadow-3: 0.03rem 0.15rem 0.094rem hsla(0, 0%, 0%, 0.5) !default;
-$txt-shadow-4: 0.03rem 0.2rem 0.094rem hsla(0, 0%, 0%, 0.5) !default;
-
-// Grid
-// Fraction widths
-$g-1: 100%;
-$g-2: repeat(2, 1fr);
-$g-3: repeat(3, 1fr);
-$g-4: repeat(4, 1fr);
-$g-5: repeat(5, 1fr);
-$g-6: repeat(6, 1fr);
-$g-7: repeat(7, 1fr);
-$g-8: repeat(8, 1fr);
-$g-9: repeat(9, 1fr);
-$g-10: repeat(10, 1fr);
-$g-11: repeat(11, 1fr);
-$g-12: repeat(12, 1fr);
-
-$fraction-grid: (
-  "g-1": $g-1,
-  "g-2": $g-2,
-  "g-3": $g-3,
-  "g-4": $g-4,
-  "g-5": $g-5,
-  "g-6": $g-6,
-  "g-7": $g-7,
-  "g-8": $g-8,
-  "g-9": $g-9,
-  "g-10": $g-10,
-  "g-11": $g-11,
-  "g-12": $g-12,
-) !default;
-
-// Gaps
-$gap-0: 0;
-$gap-1: .25rem;
-$gap-2: .5rem;
-$gap-3: 1rem;
-$gap-4: 1.5rem;
-$gap-5: 2rem;
-
-$gaps: (
-  "gap-0": $gap-0,
-  "gap-1": $gap-1,
-  "gap-2": $gap-2,
-  "gap-3": $gap-3,
-  "gap-4": $gap-4,
-  "gap-5": $gap-5,
-) !default;
-
-// Column gaps
-$gap-c-0: 0;
-$gap-c-1: .25rem;
-$gap-c-2: .5rem;
-$gap-c-3: 1rem;
-$gap-c-4: 1.5rem;
-$gap-c-5: 2rem;
-
-$gap-column: (
-  "gap-c-0": $gap-c-0,
-  "gap-c-1": $gap-c-1,
-  "gap-c-2": $gap-c-2,
-  "gap-c-3": $gap-c-3,
-  "gap-c-4": $gap-c-4,
-  "gap-c-5": $gap-c-5,
-) !default;
-
-// Row gaps
-$gap-r-0: 0;
-$gap-r-1: .25rem;
-$gap-r-2: .5rem;
-$gap-r-3: 1rem;
-$gap-r-4: 1.5rem;
-$gap-r-5: 2rem;
-
-$gap-row: (
-  "gap-r-0": $gap-r-0,
-  "gap-r-1": $gap-r-1,
-  "gap-r-2": $gap-r-2,
-  "gap-r-3": $gap-r-3,
-  "gap-r-4": $gap-r-4,
-  "gap-r-5": $gap-r-5,
-) !default;
-
-// Order
-$order-0: 0;
-$order-1: 1;
-$order-2: 2;
-$order-3: 3;
-$order-4: 4;
-$order-5: 5;
-
-$order: (
-  "order-0": $order-0,
-  "order-1": $order-1,
-  "order-2": $order-2,
-  "order-3": $order-3,
-  "order-4": $order-4,
-  "order-5": $order-5,
-) !default;
-
-// Breakpoints
-$bp576: 576px;
-$bp768: 768px;
-$bp992: 992px;
-$bp1200: 1200px;
-$bp1400: 1400px;
-
-$breakpoints: (
-  "sm": $bp576,
-  "md": $bp768,
-  "lg": $bp992,
-  "xl": $bp1200,
-  "xxl": $bp1400,
-) !default;
-
-// Spacing
-$p-25: 25% !default;
-$p-50: 50% !default;
-$p-75: 75% !default;
-$p-100: 100% !default;
-
-$percent: (
-  "25": $p-25,
-  "50": $p-50,
-  "75": $p-75,
-  "100": $p-100,
-) !default;
-
-$auto: auto !default;
-$space: 1rem !default;
-$space-0: 0 !default;
-$space-1: .15rem !default;
-$space-2: .25rem !default;
-$space-3: .5rem !default;
-$space-4: .75rem !default;
-$space-5: 1.25rem !default;
-$space-6: 1.5rem !default;
-$space-7: 2rem !default;
-
-$margins: (
-  "auto": $auto,
-  "1": $space,
-  "0": $space-0,
-  "xxs": $space-1,
-  "xs": $space-2,
-  "sml": $space-3,
-  "sm": $space-4, 
-  "lg": $space-5,
-  "xl": $space-6,
-  "xxl": $space-7,
-) !default;
-
-$padding: (
-  "1": $space,
-  "0": $space-0,
-  "xxs": $space-1,
-  "xs": $space-2,
-  "sml": $space-3,
-  "sm": $space-4, 
-  "lg": $space-5,
-  "xl": $space-6,
-  "xxl": $space-7,
-) !default;
-
-// SVG icons
-$home: url("data:image/svg+xml,<svg viewBox='0 0 16 16' fill='currentColor' xmlns='http://www.w3.org/2000/svg'><path fill-rule='evenodd' d='m1 15v-7l7-7 3 3v-2h2v4l2 2v7h-5v-5h-4v5z' clip-rule='evenodd'/></svg>");
-$email: url("data:image/svg+xml,<svg viewBox='0 0 16 16' fill='currentColor' xmlns='http://www.w3.org/2000/svg'><path fill-rule='evenodd' d='m1 2 7 8 7-8h-14zm14 0.959-4.47 5.33 4.47 5.67v-11zm-14 0.041v11l4.47-5.67-4.47-5.33zm5 6-5 6h14l-5-6-2 2-2-2z' clip-rule='evenodd'/></svg>");
-$arrowup: url("data:image/svg+xml,<svg viewBox='0 0 16 16' fill='currentColor' xmlns='http://www.w3.org/2000/svg'><path fill-rule='evenodd' d='m8.88 1.88-0.875-0.875-7 6.12v1.75l6.12-5.25v11.4h1.75v-11.4l6.12 5.25v-1.75z' clip-rule='evenodd'/></svg>");
-$newtab: url("data:image/svg+xml,<svg viewBox='0 0 16 16' fill='currentColor' xmlns='http://www.w3.org/2000/svg'><path fill-rule='evenodd' d='m9 1-1 1h5l-6.51 6.51 0.998 0.998 6.51-6.51 0.00195 5 1-1-0.00195-4.99v-0.998zm-8 2 0.00781 12h12v-8h-1v7h-9.99l-0.00781-10h7v-1z' clip-rule='evenodd'/></svg>");
-$pagelink: url("data:image/svg+xml,<svg viewBox='0 0 16 16' fill='currentColor' xmlns='http://www.w3.org/2000/svg'><path fill-rule='evenodd' d='m1 2v12h10v-3h-1v2h-8v-10h8v2h1v-3h-10zm11 2 1.88 3.29-7.88 0.041v1.37h7.88l-1.88 3.3h1.67c0.877-1.58 1.56-2.66 2.33-4l-2.45-4h-1.55z' clip-rule='evenodd'/></svg>");
-$plus: url("data:image/svg+xml,<svg viewBox='0 0 16 16' fill='currentColor' xmlns='http://www.w3.org/2000/svg'><path fill-rule='evenodd' d='m7 2v5h-5v2h5v5h2v-5h5v-2h-5v-5h-2z' clip-rule='evenodd'/></svg>");
-$minus: url("data:image/svg+xml,<svg viewBox='0 0 16 16' fill='currentColor' xmlns='http://www.w3.org/2000/svg'><path fill-rule='evenodd' d='m2 9v-2h12v2z' clip-rule='evenodd'/></svg>");
-
-$icons: (
-  "home": $home,
-  "email": $email,
-  "arrowup": $arrowup,
-  "newtab": $newtab,
-  "pagelink": $pagelink,
-  "plus": $plus,
-  "minus": $minus,
-) !default;
+$gradient-1:    linear-gradient(180deg, hsla(0, 0%, 100%, .075), hsla(0, 0%, 100%, 0)) !default;
+$gradient-2:    linear-gradient(180deg, hsla(0, 0%, 100%, .2), hsla(0, 0%, 100%, 0)) !default;
+$gradient-3:    linear-gradient(180deg, hsla(0, 0%, 100%, .3), hsla(0, 0%, 100%, 0)) !default;
+$gradient-4:    linear-gradient(180deg, hsla(0, 0%, 100%, .4), hsla(0, 0%, 100%, 0)) !default;
+$gradient-5:    linear-gradient(180deg, hsla(0, 0%, 100%, .5), hsla(0, 0%, 100%, 0)) !default;
+$gradient-6:    linear-gradient(180deg, hsla(0, 0%, 100%, .6), hsla(0, 0%, 100%, 0)) !default;
+$box-shadow-1:  0 0.125rem 0.25rem hsla(0, 0%, 0%, 0.075) !default;
+$box-shadow-2:  0 0.063rem 0.125rem hsla(0, 0%, 0%, 0.4) !default;
+$box-shadow-3:  0 0.156rem 0.25rem hsla(0, 0%, 0%, 0.4) !default;
+$box-shadow-4:  0 0.172rem 0.35rem hsla(0, 0%, 0%, 0.35) !default;
+$txt-shadow-1:  0.03rem 0.05rem 0.094rem hsla(0, 0%, 0%, 0.5) !default;
+$txt-shadow-2:  0.03rem 0.08rem 0.094rem hsla(0, 0%, 0%, 0.5) !default;
+$txt-shadow-3:  0.03rem 0.15rem 0.094rem hsla(0, 0%, 0%, 0.5) !default;
+$txt-shadow-4:  0.03rem 0.2rem 0.094rem hsla(0, 0%, 0%, 0.5) !default;

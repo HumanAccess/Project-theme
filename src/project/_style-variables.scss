@@ -1,16 +1,16 @@
 // Style variables
 
 // Body
-$font-family: var(--sans, sans-serif);
-$font-size: var(--fs-base, 1rem) !default;
-$line-height: 1.5 !default;
-$font-weight: 400 !default;
-$letter-spacing: -0.013rem !default;
+$font-family:       var(--sans, sans-serif);
+$font-size:         var(--fs-base, 1rem) !default;
+$line-height:       1.5 !default;
+$font-weight:       400 !default;
+$letter-spacing:    -0.013rem !default;
 $color: var(--text) !default;
-$background-color: var(--body-bg) !default;
+$background-color:  var(--body-bg) !default;
 
 // Links
-$link: var(--link) !default;
+$link:       var(--link) !default;
 $link-hover: var(--link-hover) !default;
 
 // Headings
@@ -28,175 +28,188 @@ $h5-fw: 700 !default;
 $h6-fw: 700 !default;
 
 // Inline and block typography
-$fs-small: var(--fs-sm, .875rem) !default;
-$fs-sup-sub: var(--fs-xs, .75rem) !default;
-$code-color: var(--link) !default;
-$code-ff: var(--monospace, monospace) !default;
-$pre-bg-color: var(--surf-2) !default;
-$pre-border-color: var(--surf-3) !default;
-$pre-outline-color: var(--surf-6) !default;
-$kbd-fs: var(--fs-sm, 0.875rem) !default;
-$kbd-color: #fff !default;
-$kbd-bg: var(--gray-9) !default;
-$figcaption: var(--fs-sm, .875rem) !default;
-$blockquote-fs: var(--fs-lgst, 1.125rem) !default;
-$blockquote-border-color: var(--surf-2) !default;
-$hr-border-color: var(--surf-3) !default;
+$fs-small:                    var(--fs-sm, .875rem) !default;
+$fs-sup-sub:                  var(--fs-xs, .75rem) !default;
+$code-color:                  var(--link) !default;
+$code-ff:                     var(--monospace, monospace) !default;
+$pre-bg-color:                var(--surf-2) !default;
+$pre-border-color:            var(--surf-3) !default;
+$pre-outline-color:           var(--surf-6) !default;
+$pre-padding:                 1rem !default;
+$pre-margin-bottom:           1rem !default;
+$kbd-fs:                      var(--fs-sm, 0.875rem) !default;
+$kbd-color:                   #fff !default;
+$kbd-bg:                      var(--gray-9) !default;
+$kbd-border-radius:           .25rem !default;
+$kbd-padding:                 .1rem .2rem !default;
+$figure-margin:               0 0 1rem !default;
+$figure-caption:              var(--fs-sm, .875rem) !default;
+$blockquote-fs:               var(--fs-lgst, 1.125rem) !default;
+$blockquote-border-width:     1px !default;
+$blockquote-border-color:     var(--surf-2) !default;
+$blockquote-padding-bottom:   .5rem !default;
+$blockquote-margin-bottom:    1rem !default;
+$details-open-margin-bottom:  .5rem !default;
+$summary-font-weight:         bold !default;
+$summary-padding-bottom:      .25rem !default;
+$hr-border-width:             1px !default;
+$hr-border-color:             var(--surf-3) !default;
+$hr-margin-bottom:            1rem !default;
 
 // Forms
-$form-padding: .25rem .5rem !default;
-$form-border: 1px solid var(--surf-4) !default;
-$check-size: 1em !default;
-$check-margin-top: 0.21em !default;
-$check-margin-right: 0.1em !default;
-$check-valign: top !default;
-$select-color: var(--text) !default;
-$select-bg-color: var(--surf-1) !default;
-$select-padding: .25rem !default;
-$fieldset-border: 1px solid var(--surf-4) !default;
-$fieldset-border-radius: 2px !default;
-$legend-border: 1px solid var(--surf-4) !default;
-$legend-border-radius: 2px !default;
-$legend-bg-color: var(--surf-2) !default;
-$legend-padding: .25rem .5rem !default;
-$placeholder-color: var(--surf-6) !default;
-$input-color-padding: 0 !default;
-$input-color-border-radius: 0 !default;
+$form-padding:                .25rem .5rem !default;
+$form-border:                 1px solid var(--surf-4) !default;
+$check-size:                  1em !default;
+$check-margin-top:            0.21em !default;
+$check-margin-right:          0.1em !default;
+$check-valign:                top !default;
+$select-color:                var(--text) !default;
+$select-bg-color:             var(--surf-1) !default;
+$select-padding:              .25rem !default;
+$fieldset-border:             1px solid var(--surf-4) !default;
+$fieldset-border-radius:      2px !default;
+$legend-border:               1px solid var(--surf-4) !default;
+$legend-border-radius:        2px !default;
+$legend-bg-color:             var(--surf-2) !default;
+$legend-padding:              .25rem .5rem !default;
+$placeholder-color:           var(--surf-6) !default;
+$input-color-padding:         0 !default;
+$input-color-border-radius:   0 !default;
 
 // Buttons - basic properties
-$btn-color: var(--text) !default;
-$btn-size: var(--fs) !default;
-$btn-bg: inherit !default;
-$btn-padding: .25rem .75rem !default;
-$btn-border-color: transparent !default;
-$btn-border-width: 1px !default;
-$btn-radius: 2px !default;
-$btn-focus: 0 0 0 0.18rem hsla(var(--btn-focus-hsl), .5) !default;
-$btn-ico-color: var(--btn-color) !default;
-$btn-transition: border-color 0.1s, background-color 0.1s !default;
+$btn-color:         var(--text) !default;
+$btn-size:          var(--fs) !default;
+$btn-bg:            inherit !default;
+$btn-padding:       .25rem .75rem !default;
+$btn-border-color:  transparent !default;
+$btn-border-width:  1px !default;
+$btn-radius:        2px !default;
+$btn-focus:         0 0 0 0.18rem hsla(var(--btn-focus-hsl), .5) !default;
+$btn-ico-color:     var(--btn-color) !default;
+$btn-transition:    border-color 0.1s, background-color 0.1s !default;
 
 // Upload file button
-$btn-file-input-display: block !default;
-$btn-file-input-width: 100% !default;
-$btn-file-input-border: 1px solid var(--surf-3) !default;
-$btn-file-input-border-radius: $btn-radius !default;
-$btn-file-input-padding: 0 !default;
-$btn-file-bg: var(--surf-2) !default;
-$btn-file-bg-hover: var(--surf-3) !default;
-$btn-file-padding: .5rem .75rem !default;
-$btn-file-radius: calc($btn-radius - 1px) !default;
-$btn-file-radius-right: 0 !default;
-$btn-file-margin-right: .5rem !default;
+$btn-file-input-display:        block !default;
+$btn-file-input-width:          100% !default;
+$btn-file-input-border:         1px solid var(--surf-3) !default;
+$btn-file-input-border-radius:  $btn-radius !default;
+$btn-file-input-padding:        0 !default;
+$btn-file-bg:                   var(--surf-2) !default;
+$btn-file-bg-hover:             var(--surf-3) !default;
+$btn-file-padding:              .5rem .75rem !default;
+$btn-file-radius:               calc($btn-radius - 1px) !default;
+$btn-file-radius-right:         0 !default;
+$btn-file-margin-right:         .5rem !default;
 
 // Button groups and toolbars
-$btn-toolbar-gap: .25rem !default;
-$btn-group-focus-shadow: none !default;
-$btn-group-focus-outline: inset thin !default;
-$btn-group-focus-color: var(--btn-border-color) !default;
+$btn-toolbar-gap:           .25rem !default;
+$btn-group-focus-shadow:    none !default;
+$btn-group-focus-outline:   inset thin !default;
+$btn-group-focus-color:     var(--btn-border-color) !default;
 
 // Button colors
 // Base button
-$base-btn-bg: var(--surf-2) !default;
-$base-btn-border-color: var(--surf-4) !default;
-$base-btn-hover-bg: var(--surf-3) !default;
-$base-btn-focus-bg: var(--surf-1) !default;
-$base-btn-focus-hsl: var(--text-hsl) !default;
+$base-btn-bg:             var(--surf-2) !default;
+$base-btn-border-color:   var(--surf-4) !default;
+$base-btn-hover-bg:       var(--surf-3) !default;
+$base-btn-focus-bg:       var(--surf-1) !default;
+$base-btn-focus-hsl:      var(--text-hsl) !default;
 
 // Submit button
-$submit-btn-color: #fff !default;
-$submit-btn-bg: var(--blue) !default;
-$submit-btn-border-color: var(--blue-light) !default;
-$submit-btn-hover-color: #fff !default;
-$submit-btn-hover-bg: var(--blue-dark) !default;
-$submit-btn-focus-color: #fff !default;
-$submit-btn-focus-bg: var(--blue-darker) !default;
-$submit-btn-focus-hsl: var(--blue-hsl) !default;
+$submit-btn-color:          #fff !default;
+$submit-btn-bg:             var(--blue-3) !default;
+$submit-btn-border-color:   var(--blue-2) !default;
+$submit-btn-hover-color:    #fff !default;
+$submit-btn-hover-bg:       var(--blue-4) !default;
+$submit-btn-focus-color:    #fff !default;
+$submit-btn-focus-bg:       var(--blue-5) !default;
+$submit-btn-focus-hsl:      var(--blue-hsl) !default;
 
 // Reset button
-$reset-btn-color: #fff !default;
-$reset-btn-bg: var(--red) !default;
-$reset-btn-border-color: var(--red-lighter) !default;
-$reset-btn-hover-color: #fff !default;
-$reset-btn-hover-bg: var(--red-dark) !default;
-$reset-btn-focus-color: #fff !default;
-$reset-btn-focus-bg: var(--red-darker) !default;
-$reset-btn-focus-hsl: var(--red-hsl) !default;
+$reset-btn-color:         #fff !default;
+$reset-btn-bg:            var(--red-3) !default;
+$reset-btn-border-color:  var(--red-1) !default;
+$reset-btn-hover-color:   #fff !default;
+$reset-btn-hover-bg:      var(--red-4) !default;
+$reset-btn-focus-color:   #fff !default;
+$reset-btn-focus-bg:      var(--red-5) !default;
+$reset-btn-focus-hsl:     var(--red-hsl) !default;
 
 // Dark buttons
-$dark-btn-color: #fff;
-$dark-btn-bg: var(--gray-10) !default;
-$dark-btn-border-color: var(--gray-9) !default;
-$dark-btn-hover-color: #fff !default;
-$dark-btn-hover-bg: var(--gray-9) !default;
-$dark-btn-focus-color: #fff !default;
-$dark-btn-focus-bg: #000 !default;
-$dark-btn-focus-hsl: var(--text-hsl) !default; 
+$dark-btn-color:          #fff;
+$dark-btn-bg:             var(--gray-12) !default;
+$dark-btn-border-color:   var(--gray-11) !default;
+$dark-btn-hover-color:    #fff !default;
+$dark-btn-hover-bg:       var(--gray-9) !default;
+$dark-btn-focus-color:    #fff !default;
+$dark-btn-focus-bg:       #000 !default;
+$dark-btn-focus-hsl:      var(--text-hsl) !default; 
 
 // Blue buttons
-$blue-btn-color: #fff !default;
-$blue-btn-bg: var(--blue) !default;
-$blue-btn-border-color: var(--blue-light) !default;
-$blue-btn-hover-color: #fff !default;
-$blue-btn-hover-bg: var(--blue-dark) !default;
-$blue-btn-focus-color: #fff !default;
-$blue-btn-focus-bg: var(--blue-darker) !default;
-$blue-btn-focus-hsl: var(--blue-hsl) !default;
+$blue-btn-color:          #fff !default;
+$blue-btn-bg:             var(--blue-3) !default;
+$blue-btn-border-color:   var(--blue-2) !default;
+$blue-btn-hover-color:    #fff !default;
+$blue-btn-hover-bg:       var(--blue-4) !default;
+$blue-btn-focus-color:    #fff !default;
+$blue-btn-focus-bg:       var(--blue-5) !default;
+$blue-btn-focus-hsl:      var(--blue-hsl) !default;
 
 // Green buttons
-$green-btn-color: #fff !default;
-$green-btn-bg: var(--green) !default;
-$green-btn-border-color: var(--green-light) !default;
-$green-btn-hover-color: #fff !default;
-$green-btn-hover-bg: var(--green-dark) !default;
-$green-btn-focus-color: #fff !default;
-$green-btn-focus-bg: var(--green-darker) !default;
-$green-btn-focus-hsl: var(--green-hsl) !default;
+$green-btn-color:         #fff !default;
+$green-btn-bg:            var(--green-3) !default;
+$green-btn-border-color:  var(--green-2) !default;
+$green-btn-hover-color:   #fff !default;
+$green-btn-hover-bg:      var(--green-4) !default;
+$green-btn-focus-color:   #fff !default;
+$green-btn-focus-bg:      var(--green-5) !default;
+$green-btn-focus-hsl:     var(--green-hsl) !default;
 
 // Red buttons
-$red-btn-color: #fff !default;
-$red-btn-bg: var(--red) !default;
-$red-btn-border-color: var(--red-lighter) !default;
-$red-btn-hover-color: #fff !default;
-$red-btn-hover-bg: var(--red-dark) !default;
-$red-btn-focus-color: #fff !default;
-$red-btn-focus-bg: var(--red-darker) !default;
-$red-btn-focus-hsl: var(--red-hsl) !default;
+$red-btn-color:           #fff !default;
+$red-btn-bg:              var(--red-3) !default;
+$red-btn-border-color:    var(--red-1) !default;
+$red-btn-hover-color:     #fff !default;
+$red-btn-hover-bg:        var(--red-4) !default;
+$red-btn-focus-color:     #fff !default;
+$red-btn-focus-bg:        var(--red-5) !default;
+$red-btn-focus-hsl:       var(--red-hsl) !default;
 
 // Yellow buttons
-$yellow-btn-color: #000 !default;
-$yellow-btn-bg: var(--yellow) !default;
-$yellow-btn-border-color: var(--yellow-light) !default;
-$yellow-btn-hover-color: #000 !default;
-$yellow-btn-hover-bg: var(--yellow-dark) !default;
-$yellow-btn-focus-color: #000 !default;
-$yellow-btn-focus-bg: var(--yellow-darker) !default;
-$yellow-btn-focus-hsl: var(--yellow-hsl) !default;
+$yellow-btn-color:        #000 !default;
+$yellow-btn-bg:           var(--yellow-3) !default;
+$yellow-btn-border-color: var(--yellow-2) !default;
+$yellow-btn-hover-color:  #000 !default;
+$yellow-btn-hover-bg:     var(--yellow-4) !default;
+$yellow-btn-focus-color:  #000 !default;
+$yellow-btn-focus-bg:     var(--yellow-5) !default;
+$yellow-btn-focus-hsl:    var(--yellow-hsl) !default;
 
 // Button sizes
-$btn-xs-fs: var(--fs-xs) !default;
-$btn-xs-padding: .15rem .5rem !default;
-$btn-sm-fs: var(--fs-sm) !default;
-$btn-sm-padding: .2rem .65rem !default;
-$btn-lg-fs: var(--fs-lgr) !default;
-$btn-lg-padding: .5rem 1.25rem !default;
-$btn-lgr-fs: var(--fs-lgst) !default;
-$btn-lgr-padding: .75rem 1.5rem !default;
+$btn-xs-fs:         var(--fs-xs) !default;
+$btn-xs-padding:    0.15rem 0.5rem !default;
+$btn-sm-fs:         var(--fs-sm) !default;
+$btn-sm-padding:    0.2rem 0.65rem !default;
+$btn-lg-fs:         var(--fs-lgr) !default;
+$btn-lg-padding:    0.5rem 1.25rem !default;
+$btn-lgr-fs:        var(--fs-lgst) !default;
+$btn-lgr-padding:   0.75rem 1.5rem !default;
 
 // Tables
-$table-width: 100% !default;
-$table-border-color: var(--surf-3) !default;
-$table-border-width: .0125rem !default;
-$table-valign: top !default;
-$table-padding: .5rem 1rem !default;
-$table-margin-bottom: 1rem !default;
-$table-cap-fs: var(--fs-sm) !default;
-$table-cap-fw: bold !default;
-$table-cap-side: top !default;
-$table-cap-align: left !default;
-$table-cap-padding: .5rem !default;
-$table-th-fw: bold !default;
-$table-thead-fw: bolder !default;
-$table-thead-bg-color: hsla(var(--text-hsl), .05) !default;
-$table-thead-border-right: var(--body-bg) !default;
-$table-tr-hover: var(--surf-2) !default;
+$table-width:               100% !default;
+$table-border-color:        var(--surf-3) !default;
+$table-border-width:        .0125rem !default;
+$table-valign:              top !default;
+$table-padding:             .5rem 1rem !default;
+$table-margin-bottom:       1rem !default;
+$table-cap-fs:              var(--fs-sm) !default;
+$table-cap-fw:              bold !default;
+$table-cap-side:            top !default;
+$table-cap-align:           left !default;
+$table-cap-padding:         .5rem !default;
+$table-th-fw:               bold !default;
+$table-thead-fw:            bolder !default;
+$table-thead-bg-color:      hsla(var(--text-hsl), .05) !default;
+$table-thead-border-right:  var(--body-bg) !default;
+$table-tr-hover:            var(--surf-2) !default;
 

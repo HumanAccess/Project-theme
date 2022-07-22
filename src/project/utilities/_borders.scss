@@ -1,0 +1,43 @@
+// Borders
+
+.border-1 {
+  border-width: 1px;
+  border-style: solid;
+  border-color: var(--border-color);
+}
+
+.border-2 {
+  border-width: 2px;
+  border-style: solid;
+  border-color: var(--border-color);
+}
+
+.border-3 {
+  border-width: 3px;
+  border-style: solid;
+  border-color: var(--border-color);
+}
+
+.border-4 {
+  border-width: 4px;
+  border-style: solid;
+  border-color: var(--border-color);
+}
+
+.border-5 {
+  border-width: 5px;
+  border-style: solid;
+  border-color: var(--border-color);
+}
+
+// Radius
+
+.radius-1, .radius-2, .radius-3, .radius-4, .radius-5 {
+  border-radius: var(--radius);
+}
+
+@each $radius, $value in $radius {
+.#{$radius} {
+  --radius: #{$value};        
+  }
+}

@@ -1,14 +1,12 @@
 // Accessibility utilities
 
 // Modeswitch button
-.mode {
+.mode, .toggle {
   --btn-bg: transparent;
   --btn-hover-bg: var(--btn-bg);
   --btn-focus-bg: var(--btn-bg);
-  --btn-border: none;
-  --svg: var(--modeswitch-svg); 
-  background-image: none;
-   
+  border: none; 
+  
   span {
     display: none;
   }
@@ -25,6 +23,14 @@
       background-color: var(--btn-bg);
     }
   }
+}
+
+.mode {
+  --svg: var(--modeswitch-svg); 
+}
+
+.toggle {
+  --svg: var(--bars); 
 }
 
 // Skip to content navigation
